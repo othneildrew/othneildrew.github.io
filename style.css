@@ -1,0 +1,109 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+  margin: 50px auto;
+  color: #263238;
+  font-size: 2em;
+  font-weight: 600;
+  text-align: center;
+}
+
+.section {
+  margin: 50px auto 50px auto;
+}
+
+.bad-script-font {
+  font-family: 'Bad Script', cursive;
+}
+
+#landing-page {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background: #03a9f4 url('/images/portfolio-interests-bk.jpg') no-repeat bottom;
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+
+#main-navbar {
+  background-color: rgba(255, 255, 255, .0);
+}
+
+.navbar-brand {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#title {
+  margin-top: 25%;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+#quote {
+  color: #eceff1;
+  font-size: 1.8em;
+}
+
+.btn-CTA {
+  padding: 12px 0px;
+	min-width: 200px;
+	min-height: auto;
+	border: none;
+	outline: none;
+	border-radius: 35px;
+	box-shadow: 10px 10px 50px rgba(0, 0, 0, .25);
+	background-color: #3f51b5;
+	color: white;
+	font-weight: 700;
+	transition: .4s;
+}
+
+.btn-CTA:hover {
+	background-color: #303f9f;
+}
+
+#about-portrait {
+  border-radius: 50%;
+}
+
+
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #title {
+    font-size: 2.5em;
+    font-weight: 700;
+  }
+
+  #quote {
+    font-size: 1.5em;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  #title {
+    font-size: 2.5em;
+    font-weight: 700;
+  }
+
+  #quote {
+    font-size: 1.8em;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
