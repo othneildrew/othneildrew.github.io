@@ -81,19 +81,19 @@ strong {
 
 .main-footer {
   padding: 100px 30px 60px 30px;
-  background-color: #03a9f4;
+  background-image: linear-gradient(to bottom, #ffffff, #e3e5fc, #bccefb, #85baf9, #03a9f4, #03a9f4);
   text-align: center;
 }
 
 #footer-CTA-text {
-  color: white;
+  color: #263238;
   font-size: 2.5em;
   font-weight: 700;
 }
 
 #footer-CTA-subtext {
   margin: -10px auto 40px auto;
-  color: #eceff1;
+  color: #455a64;
   font-size: 1.4em;
 }
 
