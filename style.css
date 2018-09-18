@@ -10,6 +10,10 @@ h2 {
   text-align: center;
 }
 
+strong {
+  color: #3f51b5;
+}
+
 .section {
   margin: 50px auto 50px auto;
 }
