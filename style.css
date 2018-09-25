@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Bad+Script|Roboto');
+
 body {
   font-family: 'Roboto', sans-serif;
 }
@@ -50,8 +52,9 @@ button.navbar-toggler {
 }
 
 .scrolledNavbar {
-  background-color: rgba(255, 255, 255, .8);
-  transition: 0.8s all;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, .1);
+  background-color: rgba(255, 255, 255, .95);
+  transition: 0.6s all;
 }
 
 .navbar-brand {
