@@ -14,6 +14,10 @@ strong {
   color: #3f51b5;
 }
 
+button.navbar-toggler {
+  border: none;
+}
+
 .section {
   margin: 50px auto 50px auto;
 }
@@ -46,8 +50,8 @@ strong {
 }
 
 .scrolledNavbar {
-  background-color: rgba(255, 255, 255, .5);
-  transition: 0.5s all;
+  background-color: rgba(255, 255, 255, .8);
+  transition: 0.8s all;
 }
 
 .navbar-brand {
