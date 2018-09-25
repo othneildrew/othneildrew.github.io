@@ -33,8 +33,21 @@ strong {
   text-align: center;
 }
 
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 #main-navbar {
-  background-color: rgba(255, 255, 255, .0);
+  margin: 0px;
+  width: 100%;
+}
+
+.scrolledNavbar {
+  background-color: rgba(255, 255, 255, .5);
+  transition: 0.5s all;
 }
 
 .navbar-brand {
@@ -43,7 +56,6 @@ strong {
 }
 
 #title {
-  margin-top: 25%;
   font-size: 2em;
   font-weight: 700;
 }
@@ -75,9 +87,6 @@ strong {
   margin: 15px auto;
   border-radius: 50%;
 }
-
-
-
 
 
 .main-footer {
@@ -128,34 +137,18 @@ strong {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-
+  #quote {
+    font-size: 1.2em;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   #title {
     font-size: 2.5em;
-    font-weight: 700;
-  }
-
-  #quote {
-    font-size: 1.5em;
-  }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-  #title {
-    font-size: 2.5em;
-    font-weight: 700;
   }
 
   #quote {
     font-size: 1.8em;
   }
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-
 }

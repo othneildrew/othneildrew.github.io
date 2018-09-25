@@ -4,8 +4,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
+    <link rel="shortcut icon" type="image/png" href="images/cloud.png">
+    <link rel="icon" type="image/png" href="images/cloud.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bad+Script|Roboto">
@@ -16,16 +16,20 @@
 
     <!-- Landing page - main content -->
     <div class="jumbotron jumbotron-fluid" id="landing-page">
-      <div class="container">
+      <div class="container-fluid">
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark" id="main-navbar">
-          <a class="navbar-brand bad-script-font" href="javascript:void(0)">Othneil Drew</a>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark" id="main-navbar">
+          <div class="container">
+            <a class="navbar-brand bad-script-font" href="javascript:void(0)">Othneil Drew</a>
+          </div><!-- END container -->
         </nav>
         <!-- END navbar -->
 
-        <h1 id="title">Designer, Full Stack Developer & Pilot</h1>
-        <p class="bad-script-font" id="quote">The best and most beautiful things in the world cannot be seen or<br /> even touched - they must be felt with the heart. - Helen Keller</p>
-        <a class="btn btn-primary btn-CTA" href="mailto:othneild@gmail.com" role="button">Get in Touch</a>
+        <div>
+          <h1 id="title">Designer, Full Stack Developer & Pilot</h1>
+          <p class="bad-script-font" id="quote">The best and most beautiful things in the world cannot be seen or<br /> even touched - they must be felt with the heart. - Helen Keller</p>
+          <a class="btn btn-primary btn-CTA" href="mailto:othneild@gmail.com" role="button">Get in Touch</a>
+        </div>
       </div>
     </div>
     <!-- END landing-page -->
@@ -37,7 +41,7 @@
         <div class="col-12 col-md-4 text-center">
           <img class="img-fluid" id="about-portrait" src="/images/portrait.jpg" alt="Portrait of Othneil Drew">
         </div>
-        <div class="col-12 col-md-8 text-justify">
+        <div class="col-12 col-md-8">
           <p>Othneil is  highly creative visionary with a strong background in <strong>UI/UX design, front-end/back-end development, strategic planning/marketing, and technical writing</strong>.</p>
           <p>Ever since his first flight in the eighth grade, he has been <strong>passionate about aviation and science</strong>. Drew has advanced skills in responsive web design and web development for major projects and companies and has developed an understanding of strategic business planning through his work with Student Pilot Portal. Drew prides himself on his ability to <strong>collaborate well with teams</strong> in any environment.</p>
 
@@ -70,18 +74,18 @@
     <div class="container section" id="testimonials">
       <h2>Testimonials</h2>
       <div class="row">
-        <div class="col-8 offset-2">
-          <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="col-12 col-md-10 offset-md-1">
+          <div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <blockquote class="blockquote text-center">
-                  <p class="mb-0" id="testimonial-quote">Throughout my experience, I have met very few with such a vast array of knowledge and skills as Mr. Drew, [he] continues to astound me with how quickly he can learn and apply new skills.</p>
+                  <p class="mb-0" id="testimonial-quote">Throughout my experience, I have met very few with such a vast array of knowledge and skills as Mr. Drew, [he] continues to astound me with how quickly he can learn and apply new skills. <br /></p>
                   <footer class="blockquote-footer"><b><span id="testimonial-author">Captain Roscoe Edwards</span></b> <br /> <cite title="Source Title" id="testimonial-author-title">Captain, United Airlines (Ret.)</cite></footer>
                 </blockquote>
               </div>
               <div class="carousel-item">
                 <blockquote class="blockquote text-center">
-                  <p class="mb-0" id="testimonial-quote">He has demonstrated genuine curiosity of the content and authentic engagement in his assignents. Without question, he stands as on of the best and brightest memeber of his class.</p>
+                  <p class="mb-0" id="testimonial-quote">He has demonstrated genuine curiosity of the content and authentic engagement in his assignents. Without question, he stands as on of the best and brightest memeber of his class. <br /></p>
                   <footer class="blockquote-footer"><b><span id="testimonial-author">Michon Benson</span></b> <br /> <cite title="Source Title" id="testimonial-author-title">College Professor, Texas Southern University</cite></footer>
                 </blockquote>
               </div>
@@ -117,10 +121,10 @@
       <p id="created-by-text"><a href="https://getbootstrap.com" target="_blank">Created with Bootstrap 4</a></p>
     </footer>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
   </body>
 </html>
