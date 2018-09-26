@@ -12,9 +12,14 @@ $(function() {
     }
   });
 
+  // Enable scrollspy in navbar to show active section of page
+  $('body').scrollspy({
+    target: '#nav-dropdown',
+    offset: 150
+  });
+
   // Change speed of carousel
   $('#testimonial-carousel').carousel({
     interval: 5000
   });
-
 });
