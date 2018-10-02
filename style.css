@@ -13,7 +13,7 @@ h2 {
   text-align: center;
 }
 
-h3 {
+h4 {
   color: black;
   font-size: 2em;
 
@@ -50,7 +50,7 @@ button.navbar-toggler {
   text-align: center;
 }
 
-.container-fluid {
+#landing-page > .container-fluid {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,6 +110,14 @@ button.navbar-toggler {
   border-radius: 50%;
 }
 
+#skills {
+  background: #3f51b5;
+}
+
+.skills-card {
+  border-radius: 2px;
+  box-shadow: 3px 3px 25px rgba(0, 0, 0, .2);
+}
 
 .main-footer {
   padding: 100px 30px 60px 30px;
