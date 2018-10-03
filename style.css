@@ -110,6 +110,7 @@ button.navbar-toggler {
   border-radius: 50%;
 }
 
+/* Responsive style to maintain 16:9 aspect ratio on YouTube video */
 .videoWrapper {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
