@@ -22,6 +22,9 @@
 4. Push to the branch (`git push origin feature/fooBar`)
 5. Create a new Pull Request
 
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
 ## Acknowledgements
 * [Bootstrap](http://www.getbootstrap.com)
 * [Font Awesome](https://fontawesome.com)
