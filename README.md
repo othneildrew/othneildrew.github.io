@@ -1,7 +1,7 @@
 # othneildrew.github.io
 > othneildrew.github.io is my personal/project website. You can view it at [https://www.othneildrew.com](https://www.othneildrew.com)
 
-![](header.png)
+![Portfolio Screenshot](images/portfolio-screenshot.jpg)
 
 
 ## Follow Me On Other Social Platforms
