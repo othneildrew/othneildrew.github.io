@@ -1,9 +1,10 @@
 # othneildrew.github.io
+> othneildrew.github.io is my personal/project website. You can view it at [https://www.othneildrew.com](https://www.othneildrew.com)
 
-This repository hosts my personal website. You can view it at [https://othneildrew.github.io](https://othneildrew.github.io)
+![](header.png)
+
 
 ## Follow Me On Other Social Platforms
-
 * [Facebook](https://facebook.com/othneildrew)
 * [Dribble](https://dribbble.com/othneildrew)
 * [LinkedIn](https://linkedin.com/in/othneildrew)
@@ -13,15 +14,14 @@ This repository hosts my personal website. You can view it at [https://othneildr
 * [Codepen](http://codepen.io/othneildrew)
 * [freeCodeCamp](http://freeCodeCamp.com/othneildrew)
 
-## Built With
-
-* [Bootstrap](http://www.getbootstrap.com)
-* [Font Awesome](https://fontawesome.com)
-
 ## Contributing
 
-If you would like to contribute to any of my projects or found a bug in my code. Feel free to submit a pull request.
+1. Fork it
+2. Create your feature branch (`git checkout -b feature/fooBar`)
+3. Commit your changes (`git commit -am 'Add some fooBar'`)
+4. Push to the branch (`git push origin feature/fooBar`)
+5. Create a new Pull Request
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+## Acknowledgements
+* [Bootstrap](http://www.getbootstrap.com)
+* [Font Awesome](https://fontawesome.com)
