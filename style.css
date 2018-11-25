@@ -44,7 +44,7 @@ button.navbar-toggler {
   padding: 0;
   width: 100%;
   height: 100vh;
-  background: #03a9f4 url('/images/portfolio-interests-bk.jpg') no-repeat bottom;
+  background: #03a9f4 url('images/portfolio-interests-bk.jpg') no-repeat bottom;
   background-size: cover;
   color: white;
   text-align: center;
