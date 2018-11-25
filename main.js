@@ -23,7 +23,7 @@ $(function() {
   });
 
   // Add smooth scroll to links
-  $("a").click(function() {
+  $("a[href*='#']").click(function() {
     if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") || location.hostname == this.hostname) {
 
       let target = $(this.hash);
