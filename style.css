@@ -1,114 +1,247 @@
-@import url('https://fonts.googleapis.com/css?family=Bad+Script|Roboto');
+/* Extra small devices (portrait phones, less than 576px) */
+
+@import url('https://fonts.googleapis.com/css?family=Bad+Script|Roboto|Material+Icons');
+
+* {
+  box-sizing: border-box;
+}
 
 body {
-  position: relative;
-  font-family: 'Roboto', sans-serif;
-}
-
-h2 {
-  margin: 50px auto;
-  color: #263238;
-  font-size: 2em;
-  font-weight: 600;
-  text-align: center;
-}
-
-h4 {
-  color: #001021;
-  font-size: 2em;
-
-}
-
-strong {
-  color: #001021;
-}
-
-button.navbar-toggler {
-  border: none;
-}
-
-.section {
-  margin: 50px auto 50px auto;
-}
-
-.section > .row {
-  margin: 100px auto 100px auto;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', arial, sans-serif, serif;
 }
 
 .bad-script-font {
   font-family: 'Bad Script', cursive;
 }
 
-#landing-page {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100vh;
-  background: #03a9f4 url('images/portfolio-interests-bk.jpg') no-repeat bottom;
+.text-dark-blue {
+  color: #192bc2;
+}
+
+.text-light-green {
+  color: #53dd6c;
+}
+
+.custom-btn {
+  padding: 10px 0px;
+	min-width: 180px;
+	height: auto;
+	outline: none;
+	border-radius: 0px;
+	color: #ffffff;
+  font-size: 1.2em;
+	font-weight: 700;
+	transition: all .4s;
+}
+
+.custom-btn:hover {
+  transform: scale(1.1);
+}
+
+#page {
+  display: none;
+}
+
+.container {
+  height: inherit;
+}
+
+#home {
+  position: relative;
+  background: url('images/dark-code-bg.png') no-repeat center;
   background-size: cover;
-  color: white;
-  text-align: center;
-}
-
-#landing-page > .container-fluid {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-#main-navbar {
-  margin: 0px;
-  width: 100%;
-}
-
-.scrolledNavbar {
-  box-shadow: 1px 1px 15px rgba(0, 0, 0, .1);
-  background-color: rgba(255, 255, 255, .95);
-  transition: 0.6s all;
-}
-
-.nav-link.active {
-  color: #03a9f4 !important;
 }
 
 .navbar-brand {
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: bold;
 }
 
-#title {
-  font-size: 2em;
+.navbar-toggler {
+  border: none;
+  color: #fff !important;
+  transition: all .4s;
+}
+
+.navbar-toggler:hover {
+  background-color: rgba(255, 255, 255, .05);
+}
+
+.navbar-toggler i {
+  vertical-align: middle;
+  font-size: 1.8em;
+}
+
+.title {
+  color: #ffffff;
+  font-size: 3.2em;
   font-weight: 700;
 }
 
-#quote {
-  color: #eceff1;
+.subtitle {
+  color: #53dd6c;
   font-size: 1.8em;
 }
 
 .btn-CTA {
-  padding: 12px 0px;
-	min-width: 200px;
-	min-height: auto;
-	border: none;
-	outline: none;
-	border-radius: 35px;
-	box-shadow: 10px 10px 50px rgba(0, 0, 0, .25);
-	background-color: #3f51b5;
-	color: white;
-	font-weight: 700;
-	transition: .4s;
+	border: 3px solid #ffffff;
+	background-color: transparent;
 }
 
 .btn-CTA:hover {
-	background-color: #303f9f;
+  color: #ffffff;
 }
 
-#about-portrait {
-  margin: 15px auto;
-  border-radius: 50%;
+#home #top-navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
 }
+
+#home .jumbotron {
+  width: 100%;
+}
+
+#home .social-icons {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+}
+
+.social-icons li.nav-item a.nav-link {
+  font-size: 1.5em;
+}
+
+.btn-demo {
+  border: 3px solid #192bc2;
+  background-color: transparent;
+  color: #192bc2;
+}
+
+.btn-demo:hover {
+  background-color: #192bc2;
+  color: #ffffff;
+}
+
+.btn-submit {
+  border: 3px solid #ffffff;
+  background-color: transparent;
+}
+
+.btn-submit:hover {
+  background-color: #ffffff;
+  color: #192bc2;
+}
+
+.btn-contact {
+  margin: 30px auto;
+  width: 320px;
+  height: auto;
+  box-shadow: 8px 8px 25px rgba(0, 0, 0, .2);
+  font-weight: 400;
+}
+
+.btn-contact:hover {
+  color: #ffffff;
+  opacity: .8;
+}
+
+#facebook-btn {
+  background-color: #3b5998;
+}
+
+#linkedin-btn {
+  background-color: #0077b5;
+}
+
+#email-btn {
+  background-color: #02010a;
+}
+
+
+.section {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.section-title {
+  padding-top: 1.8em;
+  font-size: 2.8em;
+  font-weight: 700;
+}
+
+.project-title {
+  color: #000000;
+  font-size: 2.4em;
+}
+
+/* Forms */
+.custom-input {
+  border: 3px solid #ffffff;
+  border-radius: 0px;
+  background-color: transparent;
+  color: #ffffff;
+  transition: all .6s;
+}
+
+input.custom-input::placeholder {
+  color: #ffffff;
+}
+
+.custom-input:focus {
+  border-color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+#contact {
+  position: relative;
+  background-color: #192bc2;
+}
+
+#contact .section-title {
+  padding-top: 0px;
+}
+
+#contact .copyright-text {
+  position: absolute;
+  bottom: 0px;
+  left: 30px;
+}
+
+#contact .social-icons {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Responsive style to maintain 16:9 aspect ratio on YouTube video */
 .videoWrapper {
@@ -126,76 +259,33 @@ button.navbar-toggler {
 	height: 100%;
 }
 
-#skills {
-  background: #3f51b5;
-}
-
-.skills-card {
-  border-radius: 2px;
-  border: none;
-  box-shadow: 3px 3px 25px rgba(0, 0, 0, .2);
-}
-
-.main-footer {
-  padding: 100px 30px 60px 30px;
-  background-image: linear-gradient(to bottom, #ffffff, #e3e5fc, #bccefb, #85baf9, #03a9f4, #03a9f4);
-  text-align: center;
-}
-
-#footer-CTA-text {
-  color: #263238;
-  font-size: 2.5em;
-  font-weight: 700;
-}
-
-#footer-CTA-subtext {
-  margin: -10px auto 40px auto;
-  color: #455a64;
-  font-size: 1.4em;
-}
-
-#social-icons {
-  margin: 80px auto 40px auto;
-}
-
-#social-icons a {
-  display: inline-block;
-  margin: 10px 25px;
-  color: white;
-  font-size: 1.8em;
-}
-
-#social-icons a:hover {
-  opacity: .5;
-}
-
-#copyright-text {
-  color: white;
-}
-
-#created-by-text a {
-  color: white;
-  opacity: .5;
-  font-size: .9em;
-}
-
 
 
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-  #quote {
-    font-size: 1.2em;
-  }
+
+
+
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  #title {
-    font-size: 2.5em;
-  }
 
-  #quote {
-    font-size: 1.8em;
-  }
+
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+
+
 }

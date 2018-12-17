@@ -1,4 +1,13 @@
 $(function() {
+
+  init();
+
+
+
+
+
+
+
   // Add background color to nav when user scrolls more than 50px down
   $(window).scroll(function() {
     if ($(this).scrollTop() > 50) {
@@ -39,4 +48,46 @@ $(function() {
       }
     }
   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // Functions
+  function init() {
+    $('#fakeloader').fakeLoader({
+      timeToHide: 1200,
+      zIndex: '9999',
+      spinner: 'spinner1',
+      bgColor: '#192bc2'
+    });
+
+    $('#page').show();
+
+
+
+  }
+
+
+
+
 });

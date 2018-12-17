@@ -1,27 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
+    <!-- Meta -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Houston-Based Full Stack Web Developer focusing on creating bold, unique, and amazing experiences that help 10x your business' growth.">
+    <meta name="keywords" content="Houston, Full Stack Developer, Front-End Web Developer, Aviation Developer, Back-End Developer, JavaScript, PHP, Laravel, React, Bootstrap 4, MySQL, WordPress, Othneil Drew">
+    <meta name="author" content="Othneil I Drew">
+    <!-- CSS -->
     <link rel="shortcut icon" type="image/png" href="images/plane.png">
     <link rel="icon" type="image/png" href="images/plane.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="js/plugins/fakeloader/fakeLoader.css">
+    <link rel="stylesheet" href="js/plugins/slick/slick.css">
+    <link rel="stylesheet" href="js/plugins/slick/slick-theme.css">
     <link rel="stylesheet" href="style.css">
     <title>Othneil Drew - Designer, Full Stack Developer & Pilot</title>
   </head>
   <body>
 
-    <!-- Landing page - main content -->
-    <div class="jumbotron jumbotron-fluid" id="landing-page">
-      <div class="container-fluid">
-        <!-- Navbar -->
-        <nav class="navbar fixed-top navbar-expand-md navbar-dark py-2" id="main-navbar">
+    <div id="fakeloader"></div>
+
+    <!-- Start Page -->
+    <main id="page">
+
+      <div class="section d-flex" id="home">
+        <nav class="navbar align-items-start navbar-dark mt-3 py-2" id="top-navbar">
           <div class="container">
             <a href="javascript:void(0);" class="navbar-brand bad-script-font">Othneil Drew</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-dropdown">
-              <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#nav-dropdown">
+              <small>MENU</small> <i class="material-icons">menu</i>
             </button>
             <div class="navbar-collapse collapse justify-content-stretch" id="nav-dropdown">
               <ul class="navbar-nav ml-auto">
@@ -42,272 +51,320 @@
                 </li>
               </ul>
             </div>
-          </div><!-- END container -->
+          </div>
         </nav>
-        <!-- END navbar -->
 
-        <div>
-          <h1 id="title">Designer, Full Stack Developer & Pilot</h1>
-          <p class="bad-script-font" id="quote">The best and most beautiful things in the world cannot be seen or<br /> even touched - they must be felt with the heart. - Helen Keller</p>
-          <a class="btn btn-primary btn-CTA" href="mailto:othneild@gmail.com" role="button">Get in Touch</a>
+        <div class="jumbotron bg-transparent rounded-0 justify-content-center align-self-center">
+          <div class="container">
+            <h1 class="title">Designer, Full Stack Developer & Pilot</h1>
+            <p class="subtitle">Focusing on creating <strong>bold</strong>, <i>unique</i>, and AmAzInG experiences<br /> that help 10x your business' growth</p>
+            <a class="btn custom-btn btn-CTA" href="#" role="button">Hire Me</a>
+          </div>
+        </div>
+
+        <ul class="nav social-icons">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="https://dribbble.com/othneildrew" target="_blank"><i class="fab fa-dribbble"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="https://github.com/othneildrew" target="_blank"><i class="fab fa-github"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="https://linkedin.com/in/othneildrew" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </li>
+        </ul>
+      </div>
+      <!-- END home -->
+
+      <!-- Latest Work -->
+      <div class="section">
+        <div class="container">
+          <h2 class="section-title text-dark-blue">Latest Work</h2>
+
+          <div class="row my-5 py-5">
+            <div class="col-12 col-md-7">
+              <img class="img-fluid" src="./images/projects/movie-flex.gif" alt="Movie Flex Screenshot">
+            </div>
+            <div class="col-12 col-md-5">
+              <h3 class="project-title">Movie Flex</h3>
+              <p>Browse your favorite movies, actors and watch trailers. See what's playing in theaters right now. Discover upcoming, trending, and top-rated titles.</p>
+
+              <ul>
+                <li>The Movie Database API</li>
+                <li>Bootstrap 4</li>
+                <li>HTML / CSS / JavaScript / JQuery</li>
+                <li>AJAX</li>
+              </ul>
+
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <a href="https://www.othneildrew.com/Movie-Flex" target="_blank" class="btn custom-btn btn-demo">Visit Project <i class="fas angle-right"></i></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://github.com/othneildrew/Movie-Flex" target="_blank"><i class="fas fa-code"></i> View Code</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="row my-5 py-5">
+            <div class="col-12 col-md-7 order-md-2">
+              <img class="img-fluid" src="./images/projects/spp.gif" alt="Student Pilot Portal Screenshot">
+            </div>
+            <div class="col-12 col-md-5">
+              <h3 class="project-title">Student Pilot Portal</h3>
+              <p>E-learning platform that enables pilots to learn about aviation and share their passion for flight with other pilots.</p>
+
+              <ul>
+                <li>Laravel 5 / Bootstrap 4</li>
+                <li>Built following Material UI design guidelines</li>
+                <li>Multiple (4) user permissions & roles</li>
+                <li>Dynamic forms and form validation with JQuery, AJAX, and PHP</li>
+                <li>Deploy and maintain files on apache web server using Git and FTP</li>
+                <li>Constructed MySQL relational database architecture (using normalization) for storing over 51,000 airports and runway information obtained from REST API</li>
+              </ul>
+
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <a href="https://studentpilotportal.com" class="btn custom-btn btn-demo">Visit Project <i class="fas angle-right"></i></a>
+                </li>
+                <li class="list-inline-item">
+                  <p><i class="fas fa-eye-slash"></i> Code private</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="row my-5 py-5">
+            <div class="col-12 col-md-7">
+              <img class="img-fluid" src="./images/projects/johns-pizza.gif" alt="">
+            </div>
+            <div class="col-12 col-md-5">
+              <h3 class="project-title">John's Pizza</h3>
+              <p>Order the best pizza and get it right to your door. No signups, no logins - Just Great Pizza!</p>
+
+              <ul>
+                <li>Bootstrap 4</li>
+                <li>Created menu database from scratch using JSON</li>
+                <li>JQuery used to present data for amazing user experience</li>
+              </ul>
+
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <a href="https://www.othneildrew.com/johnspizza" target="_blank" class="btn custom-btn btn-demo">Visit Project <i class="fas angle-right"></i></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://github.com/othneildrew/johnspizza" target="_blank"><i class="fas fa-code"></i> View Code</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+
+
         </div>
       </div>
+      <!-- END Latest Work -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="section d-flex" id="contact">
+        <div class="container align-self-center">
+          <h2 class="section-title text-light-green font-weight-bold text-center">Interested in working together?</h2>
+          <p class="lead text-white text-center">Let's talk about your next project!</p>
+
+          <div class="row mt-5">
+            <div class="col-12 col-md-6">
+              <p class="lead font-weight-bold text-white">Send me a message</p>
+
+              <form>
+                <div class="form-group">
+                  <input type="text" class="form-control form-control-lg custom-input" id="inp_name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control form-control-lg custom-input" id="inp_email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control form-control-lg custom-input" id="inp_message" rows="6">Your Message</textarea>
+                </div>
+                <button type="submit" class="btn custom-btn btn-submit">Submit</button>
+              </form>
+            </div>
+            <div class="col-12 col-md-6 mt-5">
+              <a href="https://facebook.com/othneildrew" target="_blank" class="btn d-block custom-btn btn-contact" id="facebook-btn">
+                <i class="fab fa-facebook"></i> Message on Facebook
+              </a>
+              <a href="https://linkedin.com/in/othneildrew" target="_blank" class="btn d-block custom-btn btn-contact" id="linkedin-btn">
+                <i class="fab fa-linkedin"></i> Connect on LinkedIn
+              </a>
+              <a href="mailto:othneild@gmail.com" class="btn d-block custom-btn btn-contact" id="email-btn">
+                <i class="fas fa-envelope"></i> Send an Email
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <p class="copyright-text text-white">Copyright Othneil Drew &copy; 2018</p>
+
+        <ul class="nav social-icons">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="https://dribbble.com/othneildrew" target="_blank"><i class="fab fa-dribbble"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="https://github.com/othneildrew" target="_blank"><i class="fab fa-github"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="https://linkedin.com/in/othneildrew" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+    </main>
+    <!-- END Page -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="fullpage" style="display: none;">
+
+
+
+      <!-- RECENT WORK -->
+      <div class="page-deck" id="latest-work">
+        <div class="container bg-danger">
+
+          <h2 class="py-5 text-center font-weight-bold text-dark-blue">Latest Work</h2>
+
+          <div class="row" id="projects-container">
+            <div class="col-10 offset-1 text-center bg-success">
+              <div class="bg-primary">
+                <img class="img-fluid" src="images/projects/spp.gif" width=600 alt="Movie Flex">
+                <div class="col-12 col-md-6">
+                  <h3>Movie Flex</h3>
+                  <p>Browse your favorite movies, actors and watch trailers. See what's playing in theaters right now. Discover upcoming, trending, and top-rated titles.</p>
+                  <ul>
+                    <li>The Movie Database API</li>
+                    <li>Bootstrap 4</li>
+                    <li>HTML / CSS / JavaScript / JQuery</li>
+                    <li>AJAX</li>
+                  </ul>
+
+                  <ul class="list-inline">
+                    <li class="list-inline-item">
+                      <a href="" class="btn custom-btn btn-demo">Visit Project <i class="fas angle-right"></i></a>
+                    </li>
+                    <li class="list-inline-item"><a href="">View Code</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+        </div>
+      </div>
+      <!-- END Recent Work -->
+
+
+
+
+      <!-- CONTACT -->
+      <div class="page-deck" id="contact">
+        <div class="container">
+          <div class="align-items-start">
+            <h2 class="deck-title text-light-green font-weight-bold text-center">Interested in working together?</h2>
+            <p class="lead text-white text-center">Let's talk about your next project!</p>
+          </div>
+
+          <div class="row mt-5">
+            <div class="col-12 col-md-6">
+              <p class="lead font-weight-bold text-white">Send me a message</p>
+
+              <form>
+                <div class="form-group">
+                  <input type="text" class="form-control form-control-lg custom-input" id="inp_name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control form-control-lg custom-input" id="inp_email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control form-control-lg custom-input" id="inp_message" rows="6">Your Message</textarea>
+                </div>
+                <button type="submit" class="btn custom-btn btn-submit">Submit</button>
+              </form>
+            </div>
+            <div class="col-12 col-md-6 mt-5">
+              <a href="https://facebook.com/othneildrew" target="_blank" class="btn d-block custom-btn btn-contact" id="facebook-btn">
+                <i class="fab fa-facebook"></i> Message on Facebook
+              </a>
+              <a href="https://linkedin.com/in/othneildrew" target="_blank" class="btn d-block custom-btn btn-contact" id="linkedin-btn">
+                <i class="fab fa-linkedin"></i> Connect on LinkedIn
+              </a>
+              <a href="mailto:othneild@gmail.com" class="btn d-block custom-btn btn-contact" id="email-btn">
+                <i class="fas fa-envelope"></i> Send an Email
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END Contact -->
+
+
+
+
+
+
     </div>
-    <!-- END landing-page -->
-
-    <div class="container section" id="about">
-      <h2># About Othneil</h2>
-
-      <div class="row">
-        <div class="col-12 col-md-4 text-center">
-          <img class="img-fluid" id="about-portrait" src="images/portrait.jpg" alt="Portrait of Othneil Drew">
-        </div>
-        <div class="col-12 col-md-8">
-          <p>Othneil is a highly creative visionary with a strong background in <strong>UI/UX design, front-end/back-end development, strategic planning/marketing, and technical writing</strong>.</p>
-          <p>Ever since his first flight in the eighth grade, he has been <strong>passionate about aviation and science</strong>. Drew has advanced skills in responsive web design and web development for major projects and companies and has developed an understanding of strategic business planning through his work with Student Pilot Portal. Drew prides himself on his ability to <strong>collaborate well with teams</strong> in any environment.</p>
-
-          <p>Drew serves as an advocate for promoting youth in the aviation industry and is actively involved with many organizations like the Organization of Black Aerospace Professions, Virgin Islands Chapter Tuskegee Airmen, Inc. (VICTAI), U.S. Dream Academy, and the United States Coast Guard Auxiliary. He has <strong>raised more than $2,000 in donations</strong> for nonprofits through effective fundraising efforts, while <strong>volunteering 900+ hours of service</strong>. He is also responsbile for a <strong>15% increase</strong> in his school's student pilot enrollment which he obtained through <strong>social media and print recruitment campaigns.</strong></p>
-
-          <p><strong>Interests:</strong> Flight Simulation, Photography, Gaming, Guitar, NCIS: Los Angeles, Code (of course :P)</p>
-
-          <p><a href="assets/resumes/OthneilDrewWebDeveloperResume.pdf" target="_blank">View Resume</a></p>
-
-          <div class="videoWrapper">
-            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/wI_IxwJERPc?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div><!-- END videoWrapper -->
-        </div>
-      </div><!-- END row -->
-    </div><!-- END about -->
-
-    <div class="container-fluid py-3" id="skills">
-      <div class="container section">
-        <h2 class="text-white"># Skills</h2>
-
-        <div class="row">
-
-          <div class="col my-3 my-md-0">
-            <div class="card skills-card">
-              <div class="card-body">
-                <h3 class="card-title text-center font-weight-bold"><i class="fas fa-pen-nib"></i> Designer</h3>
-
-                <ul class="mt-4">
-                  <li>UI/UX design</li>
-                  <li>Wireframing</li>
-                  <li>Prototyping</li>
-                  <li>User Stories</li>
-                </ul>
-
-                <p class="mt-4 mb-0 text-success">Design Tool Kit</p>
-                <ul class="m-0">
-                  <li>Moqups</li>
-                  <li>Vectornator</li>
-                  <li>Adobe Lightroom</li>
-                  <li>GIMP</li>
-                </ul>
-              </div>
-            </div><!-- END card -->
-          </div><!-- END col -->
-
-          <div class="col my-3 my-md-0">
-            <div class="card skills-card">
-              <div class="card-body">
-                <h3 class="card-title text-center font-weight-bold"><i class="fas fa-code"></i> Developer</h3>
-
-                <p class="mt-4 mb-0 text-success">Front End</p>
-                <ul class="m-0">
-                  <li>JavaScript</li>
-                  <li>JQuery</li>
-                  <li>HTML5</li>
-                  <li>CSS3</li>
-                  <li>React (novice)</li>
-                  <li>Bootstrap</li>
-                  <li>WordPress (novice)</li>
-                </ul>
-
-                <p class="mt-4 mb-0 text-success">Back End</p>
-                <ul class="m-0">
-                  <li>REST / MySQL</li>
-                  <li>PHP</li>
-                  <li>Apache</li>
-                  <li>Laravel (novice)</li>
-                  <li>WordPress (novice)</li>
-                </ul>
-
-                <p class="mt-4 mb-0 text-success">Deverloper Tool Kit</p>
-                <ul class="m-0">
-                  <li>Atom Text Editor</li>
-                  <li>Sublime Text Editor</li>
-                  <li>Git (Git Flow)</li>
-                  <li>GitHub</li>
-                  <li>Bitbucket</li>
-                  <li>SCRUM / Agile Methodologies</li>
-                  <li>Chrome Developer Tools</li>
-                  <li>Asana</li>
-                </ul>
-              </div>
-            </div><!-- END card -->
-          </div><!-- END col -->
-
-          <div class="col my-3 my-md-0">
-            <div class="card skills-card">
-              <div class="card-body">
-                <h3 class="card-title text-center font-weight-bold"><i class="fas fa-plane-departure"></i> Pilot</h3>
-
-                <ul class="mt-4">
-                  <li>Private Pilot Certification</li>
-                </ul>
-
-                <p class="mt-4 mb-0 text-success">Flight Time (hours)</p>
-                <ul class="m-0">
-                  <li>Total: 87.3</li>
-                  <li>PIC: 18</li>
-                  <li>Cross-Country: 15.8</li>
-                  <li>Solo: 8</li>
-                  <li>Night: 4</li>
-                </ul>
-              </div>
-            </div><!-- END card -->
-          </div><!-- END col -->
-
-        </div><!-- END row -->
-      </div><!-- END section -->
-    </div><!-- END skills -->
-
-
-    <div class="container section" id="projects">
-      <h2># Projects</h2>
-
-      <div class="row">
-        <div class="mt-3 col-12 col-md-7">
-          <img class="img-fluid project-img" src="images/projects/spp.gif" alt="Student Pilot Portal Demo">
-        </div>
-        <div class="mt-3 col-12 col-md-5">
-          <h4>Student Pilot Portal</h4>
-          <p>Web app that enables pilots to learn about aviation and share their passion for flight with other pilots.</p>
-
-          <ul>
-            <li>Built following Material UI design guidelines</li>
-            <li>Fully functioning application with multiple (4) user permissions/roles</li>
-            <li>Form validation achieved with JQuery, AJAX, and PHP</li>
-            <li>Upload and maintain files on apache web server using Git and FTP</li>
-            <li>Constructed MySQL relational database architecture for storing over 51,000 airports and runway information obtained from REST API</li>
-          </ul>
-
-          <a class="btn btn-primary btn-CTA btn-sm" href="https://studentpilotportal.com" target="_blank" role="button">Demo</a>
-
-          <span class="mx-3"><i class="far fa-eye-slash"></i> Source Private</span>
-        </div>
-      </div><!-- END row -->
-
-
-      <div class="row">
-        <div class="mt-3 col-12 col-md-7">
-          <img class="img-fluid project-img" src="images/projects/johns.gif" alt="John's Pizza Demo">
-        </div>
-        <div class="col-12 col-md-5">
-          <h4>John's Pizza</h4>
-          <p>A pizza ordering and delivery web application.</p>
-
-          <ul>
-            <li>Built with Bootstrap 4</li>
-            <li>Created database from scratch using JSON</li>
-            <li>JQuery used to present data for amazing user experience</li>
-          </ul>
-
-          <a class="btn btn-primary btn-CTA btn-sm" href="https://www.othneildrew.com/johnspizza" target="_blank" role="button">Demo</a>
-
-          <span class="mx-3"><a href="https://github.com/othneildrew/johnspizza" target="_blank"><i class="fas fa-code"></i> View source</a></span>
-        </div>
-      </div><!-- END row -->
-
-
-      <div class="row">
-        <div class="col-12 col-md-7">
-          <img class="img-fluid project-img" src="images/projects/nature.gif" alt="Nature's Gift Photography Demo">
-        </div>
-        <div class="col-12 col-md-5">
-          <h4>Nature's Gift Photography</h4>
-          <p>Beautiful photographer's portfolio to showcase nature photos.</p>
-
-          <ul>
-            <li>Built with HTML5, CSS3, and JQuery</li>
-            <li>Utilized CSS3 grids and media queries</li>
-            <li>Created overlay modal with JQuery</li>
-          </ul>
-
-          <a class="btn btn-primary btn-CTA btn-sm" href="https://www.othneildrew.com/nature-gift-photography" target="_blank" role="button">Demo</a>
-
-          <span class="mx-3"><a href="https://github.com/othneildrew/nature-gift-photography" target="_blank"><i class="fas fa-code"></i> View source</a></span>
-        </div>
-      </div><!-- END row -->
-    </div><!-- END projects -->
-
-
-    <div class="container section" id="testimonials">
-      <h2># Testimonials</h2>
-      <div class="row">
-        <div class="col-12 col-md-10 offset-md-1">
-          <div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <blockquote class="blockquote text-center">
-                  <p class="mb-0" id="testimonial-quote">Throughout my experience, I have met very few with such a vast array of knowledge and skills as Mr. Drew, [he] continues to astound me with how quickly he can learn and apply new skills. <br /><a href="assets/recommendations/12-05-2017-CaptainRoscoeEdwards.pdf" target="_blank">View Recommendation Letter</a></p>
-                  <footer class="blockquote-footer"><b><span id="testimonial-author">Captain Roscoe Edwards</span></b> <br /> <cite title="Captain Roscoe Edwards" id="testimonial-author-title">Captain, United Airlines (Ret.)</cite></footer>
-                </blockquote>
-              </div>
-              <div class="carousel-item">
-                <blockquote class="blockquote text-center">
-                  <p class="mb-0" id="testimonial-quote">He has demonstrated genuine curiosity of the content and authentic engagement in his assignments. Without question, he stands as on of the best and brightest members of his class. <br /><a href="assets/recommendations/02-06-2018-MichonBenson.pdf" target="_blank">View Recommendation Letter</a></p>
-                  <footer class="blockquote-footer"><b><span id="testimonial-author">Michon Benson</span></b> <br /> <cite title="Michon Benson" id="testimonial-author-title">College Professor, Texas Southern University</cite></footer>
-                </blockquote>
-              </div>
-              <div class="carousel-item">
-                <blockquote class="blockquote text-center">
-                  <p class="mb-0" id="testimonial-quote">His drive and passion keeps him continually searching for new information and opportunities... Othneil has earned hundreds of hours of community service throughout the years living on St. Croix... he gives that same compassion to his new community mentoring students. <br /><a href="assets/recommendations/04-25-2018-CenitaHeywood.pdf" target="_blank">View Recommendation Letter</a></p>
-                  <footer class="blockquote-footer"><b><span id="testimonial-author">Cenita Heywood</span></b> <br /> <cite title="Cenita Heywood" id="testimonial-author-title">President, Virgin Islands Youth Aviation Program, Inc.</cite></footer>
-                </blockquote>
-              </div>
-            </div><!-- END carousel-inner -->
-            <!--
-            // Comment out until able to resolve errors
-            <a class="carousel-control-prev" href="#testimonials" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#testimonials" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-            -->
-          </div><!-- END testimonial-carousel -->
-        </div><!-- END col -->
-      </div><!-- END row -->
-    </div><!-- END testimonials -->
-
-
-    <footer class="main-footer">
-      <p id="footer-CTA-text">Interested in working together?</p>
-      <p id="footer-CTA-subtext">Let's chat about your project requirements.</p>
-      <a class="btn btn-primary btn-CTA" href="mailto:othneild@gmail.com" role="button">Get in Touch</a>
-
-      <div id="social-icons">
-        <a href="https://facebook.com/othneildrew" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://dribbble.com/othneildrew" target="_blank"><i class="fab fa-dribbble"></i></a>
-        <a href="https://linkedin.com/in/othneildrew" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com/othneildrew" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://bitbucket.com/othneildrew" target="_blank"><i class="fab fa-bitbucket"></i></a>
-        <a href="https://codepen.io/othneildrew" target="_blank"><i class="fab fa-codepen"></i></a>
-        <a href="mailto:othneild@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-      </div>
-
-      <p id="copyright-text">Built with <i class="fas fa-heart text-danger"></i> by Othneil Drew &copy; 2018</p>
-      <p id="created-by-text"><a href="https://github.com/othneildrew/othneildrew.github.io" target="_blank">(View source)</a></p>
-    </footer>
 
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+
+    <script src="js/plugins/fakeloader/fakeLoader.min.js"></script>
+    <script src="js/plugins/slick/slick.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
