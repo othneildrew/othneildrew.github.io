@@ -20,7 +20,6 @@ $(function() {
     }
   });
 
-
   // Functions
   function init() {
     $('#fakeloader').fakeLoader({
