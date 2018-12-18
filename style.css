@@ -230,13 +230,15 @@ body {
 #contact .copyright-text {
   position: absolute;
   bottom: 0px;
-  left: 30px;
+  width: 100%;
+  text-align: center;
 }
 
 #contact .social-icons {
   position: absolute;
-  bottom: 20px;
-  right: 30px;
+  margin: 0 auto;
+  bottom: 40px;
+  right: 0;
 }
 
 /* Forms */
@@ -260,14 +262,16 @@ input.custom-input::placeholder {
   margin: 30px auto;
   width: 320px;
   height: auto;
-  box-shadow: 8px 8px 25px rgba(0, 0, 0, .2);
+  box-shadow: 8px 8px 25px rgba(0, 0, 0, .1);
   font-weight: 400;
-  opacity: .9;
 }
 
 .btn-contact:hover {
   color: #ffffff;
-  opacity: 1;
+}
+
+#quote-btn {
+  background-color: #53dd6c;
 }
 
 #facebook-btn {
@@ -285,7 +289,18 @@ input.custom-input::placeholder {
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
 
+  #contact .copyright-text {
+    position: absolute;
+    bottom: 10px;
+    width: auto;
+    left: 30px;
+  }
 
+  #contact .social-icons {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+  }
 
 }
 

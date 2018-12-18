@@ -33,6 +33,7 @@ $(function() {
 
     $('#testimonial-slider').slick({
       autoplay: true,
+      arrows: false,
       dots: true,
       speed: 1500
     });
