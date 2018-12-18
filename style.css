@@ -201,6 +201,10 @@ body {
   font-weight: 600
 }
 
+.blockquote-footer cite {
+  color: #53dd6c;
+}
+
 .slick-dots li button:before {
   color: #192bc2;
   font-size: 12px;
@@ -277,23 +281,6 @@ input.custom-input::placeholder {
 #email-btn {
   background-color: #02010a;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
