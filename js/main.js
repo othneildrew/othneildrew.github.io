@@ -44,6 +44,8 @@ $(function() {
 
     $('#page').show();
 
+    new WOW().init();
+
     $('#testimonial-slider').slick({
       autoplay: true,
       arrows: false,
