@@ -22,33 +22,29 @@
 
     <div id="fakeloader"></div>
 
+    <!-- Menu -->
+    <div id="menu" class="overlay-menu">
+      <a href="javascript:void(0)" class="close-btn" id="close-menu-btn">&times;</a>
+      <div class="menu-links">
+        <a class="menu-link" href="#latest-work">Latest Work</a>
+        <a class="menu-link" href="#about">About</a>
+        <a class="menu-link" href="#skills">Skills</a>
+        <a class="menu-link" href="#testimonials">Testimonials</a>
+        <a class="menu-link" href="#contact">Contact</a>
+        <a class="menu-link" href="./assets/resumes/OthneilDrewWebDeveloperResume.pdf" target="_blank">Resume</a>
+      </div>
+    </div>
+    <!-- END Menu -->
+
+    <!-- START OF MAIN PAGE CONTENT -->
     <main id="page">
       <div class="section d-flex" id="home">
         <nav class="navbar align-items-start navbar-dark mt-3 py-2" id="top-navbar">
           <div class="container">
             <a href="javascript:void(0);" class="navbar-brand bad-script-font">Othneil Drew</a>
-            <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#nav-dropdown">
+            <button class="navbar-toggler rounded-0" id="menu-btn" type="button">
               <small>MENU</small> <i class="material-icons">clear_all</i>
             </button>
-            <div class="navbar-collapse collapse justify-content-stretch" id="nav-dropdown">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#skills">Skills</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#projects">Projects</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#testimonials">Testimonials</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="assets/resumes/OthneilDrewWebDeveloperResume.pdf" target="_blank">Resume</a>
-                </li>
-              </ul>
-            </div>
           </div>
         </nav>
 
@@ -78,7 +74,7 @@
       <!-- END home -->
 
       <!-- Latest Work -->
-      <div class="section">
+      <div class="section" id="latest-work">
         <div class="container">
           <h2 class="section-title text-dark-blue">Latest Work</h2>
 

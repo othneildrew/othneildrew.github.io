@@ -40,6 +40,53 @@ body {
   transform: scale(1.1);
 }
 
+#menu {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 0%;
+  max-height: 100vh;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, .95);
+  overflow-y: hidden;
+  transition: .4s;
+}
+
+#menu .menu-links {
+  position: relative;
+  top: 15%;
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+#menu a {
+  display: block;
+  padding: 8px;
+  color: #192bc2;
+  font-size: 3.2em;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.4s;
+}
+
+#menu a:hover,
+#menu a:focus {
+  transform: scale(1.1);
+}
+
+#menu .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
 #page {
   display: none;
 }
