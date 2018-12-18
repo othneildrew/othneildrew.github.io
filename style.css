@@ -91,7 +91,8 @@ body {
 }
 
 .btn-CTA:hover {
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #53dd6c;
 }
 
 #home #top-navbar {
@@ -136,32 +137,6 @@ body {
   color: #192bc2;
 }
 
-.btn-contact {
-  margin: 30px auto;
-  width: 320px;
-  height: auto;
-  box-shadow: 8px 8px 25px rgba(0, 0, 0, .2);
-  font-weight: 400;
-}
-
-.btn-contact:hover {
-  color: #ffffff;
-  opacity: .8;
-}
-
-#facebook-btn {
-  background-color: #3b5998;
-}
-
-#linkedin-btn {
-  background-color: #0077b5;
-}
-
-#email-btn {
-  background-color: #02010a;
-}
-
-
 .section {
   margin: 0px;
   padding: 0px;
@@ -201,7 +176,7 @@ body {
 }
 
 #about {
-  background-color: #192bc2;
+  background-color: #000122;
 }
 
 .skill-card {
@@ -217,23 +192,27 @@ body {
   font-weight: 700;
 }
 
+.why-work-icons {
+  font-size: 4em;
+}
 
+#testimonials p.lead {
+  font-size: 2em;
+  font-weight: 600
+}
 
+.slick-dots li button:before {
+  color: #192bc2;
+  font-size: 12px;
+  opacity: 1;
+  transition: all .2s;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.slick-dots li.slick-active button:before {
+  color: #192bc2;
+  font-size: 20px;
+  opacity: 1;
+}
 
 #contact {
   position: relative;
@@ -273,7 +252,31 @@ input.custom-input::placeholder {
   border-color: #ffffff;
 }
 
+.btn-contact {
+  margin: 30px auto;
+  width: 320px;
+  height: auto;
+  box-shadow: 8px 8px 25px rgba(0, 0, 0, .2);
+  font-weight: 400;
+  opacity: .9;
+}
 
+.btn-contact:hover {
+  color: #ffffff;
+  opacity: 1;
+}
+
+#facebook-btn {
+  background-color: #3b5998;
+}
+
+#linkedin-btn {
+  background-color: #0077b5;
+}
+
+#email-btn {
+  background-color: #02010a;
+}
 
 
 
