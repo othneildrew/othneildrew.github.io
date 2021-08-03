@@ -62,4 +62,8 @@ $(function() {
     $('#menu').css('height', '0%');
   }
 
+  $('.dtYear').each(function() {
+      $(this).text(new Date().getFullYear());
+  });
+
 });
