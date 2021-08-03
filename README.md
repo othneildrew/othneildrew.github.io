@@ -103,6 +103,7 @@ Project Link: [https://github.com/othneildrew/othneildrew.github.io](https://git
 * [Material Icons](https://material.io/icons)
 * [FakeLoader.js](https://joaopereirawd.github.io/fakeLoader.js)
 * [WOW.js](https://www.delac.io/wow)
+* [EZGif.com](https://ezgif.com/maker)
 
 
 
