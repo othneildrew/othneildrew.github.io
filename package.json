@@ -1,0 +1,64 @@
+{
+  "name": "othneildrew.github.io",
+  "version": "1.0.0",
+  "description": "Personal porfolio for Othneil Drew - Full Stack Developer for hire",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "babelify": "^10.0.0",
+    "browser-sync": "^2.27.5",
+    "browserify": "^17.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulplog": "^1.0.0",
+    "node-sass": "^6.0.1",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "engines": {
+    "node": "^14.14.0"
+  },
+  "scripts": {
+    "watch": "npm run start",
+    "start": "gulp serve",
+    "build": "gulp",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production gulp",
+    "package": "npm run production",
+    "build-html-only": "gulp html",
+    "build-css-only": "gulp css",
+    "build-scripts-only": "gulp scripts",
+    "build-assets-only": "gulp assets",
+    "optimize-assets": "echo \"Error: script not set\" && exit 1"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/othneildrew/othneildrew.github.io.git"
+  },
+  "keywords": [
+    "Web Porfolio",
+    "Front-end Developer",
+    "Back-end Developer",
+    "Full Stack Developer",
+    "Software Developer",
+    "Software Engineer",
+    "Web Developer"
+  ],
+  "author": "Othneil Drew <codeguydrew@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/othneildrew/othneildrew.github.io/issues"
+  },
+  "homepage": "https://github.com/othneildrew/othneildrew.github.io#readme"
+}
