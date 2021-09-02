@@ -1,0 +1,46 @@
+
+.link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    opacity: 0.65;
+
+    &--block {
+
+    }
+}
+
+.underline-link {
+    @include transitions-ease(0.4s);
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #ffffff;
+        @include scale(0, 1);
+
+    }
+
+    &:hover {
+        opacity: 1;
+
+        &:after {
+            @include transitions-ease(0.4s);
+            @include scale(1, 1);
+        }
+    }
+
+    &:active {
+        color: #ffffff;
+        opacity: 1;
+
+        &:after {
+            //height: 2px;
+        }
+    }
+}

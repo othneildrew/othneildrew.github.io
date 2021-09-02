@@ -1,0 +1,325 @@
+
+@mixin d-block {
+    display: block;
+}
+
+@mixin border-box {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@mixin content-box {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+@mixin transitions-ease($timing){
+	-webkit-transition: all $timing cubic-bezier(.3,0,.2,1);
+	-moz-transition: all $timing cubic-bezier(.3,0,.2,1);
+	-ms-transition: all $timing cubic-bezier(.3,0,.2,1);
+	-o-transition: all $timing cubic-bezier(.3,0,.2,1);
+    transition: all $timing cubic-bezier(.3,0,.2,1);
+}
+
+@mixin trans-ease-delay($timing, $delay){
+	-webkit-transition: all $timing cubic-bezier(.3,0,.2,1) $delay;
+	-moz-transition: all $timing cubic-bezier(.3,0,.2,1) $delay;
+	-ms-transition: all $timing cubic-bezier(.3,0,.2,1) $delay;
+	-o-transition: all $timing cubic-bezier(.3,0,.2,1) $delay;
+	transition: all $timing cubic-bezier(.3,0,.2,1) $delay;
+}
+
+@mixin translate($Xmove, $Ymove){
+	-webkit-transform: translate($Xmove, $Ymove);
+	-moz-transform: translate($Xmove, $Ymove);
+	-ms-transform: translate($Xmove, $Ymove);
+	-o-transform: translate($Xmove, $Ymove);
+	transform: translate($Xmove, $Ymove);
+}
+
+@mixin translate3d($Xmove, $Ymove, $Zmove){
+	-webkit-transform: translate3d($Xmove, $Ymove, $Zmove);
+	-moz-transform: translate3d($Xmove, $Ymove, $Zmove);
+	transform: translate3d($Xmove, $Ymove, $Zmove);
+}
+
+@mixin rotate($degs){
+	-webkit-transform: -webkit-rotate($degs);
+	-webkit-transform: rotate($degs);
+	-moz-transform: rotate($degs);
+	-ms-transform: rotate($degs);
+	-o-transform: rotate($degs);
+	transform: rotate($degs);
+}
+
+@mixin translate-rotate($Xmove, $Ymove, $degs){
+	-webkit-transform: -webkit-translate($Xmove, $Ymove) -webkit-rotate($degs);
+	-webkit-transform: translate($Xmove, $Ymove) rotate($degs);
+	-moz-transform: translate($Xmove, $Ymove) rotate($degs);
+	-ms-transform: translate($Xmove, $Ymove) rotate($degs);
+	-o-transform: translate($Xmove, $Ymove) rotate($degs);
+	transform: translate($Xmove, $Ymove) rotate($degs);
+}
+
+@mixin scale($X, $Y){
+	-webkit-transform: scale($X, $Y);
+	-moz-transform: scale($X, $Y);
+	-ms-transform: scale($X, $Y);
+	-o-transform: scale($X, $Y);
+	transform: scale($X, $Y);
+}
+
+@mixin scale-rotate($Xscale, $Yscale, $degs){
+	-webkit-transform: -webkit-scale($Xscale, $Yscale) -webkit-rotate($degs);
+	-webkit-transform: scale($Xscale, $Yscale) rotate($degs);
+	-moz-transform: scale($Xscale, $Yscale) rotate($degs);
+	-ms-transform: scale($Xscale, $Yscale) rotate($degs);
+	-o-transform: scale($Xscale, $Yscale) rotate($degs);
+	transform: scale($Xscale, $Yscale) rotate($degs);
+}
+
+@mixin transform-origin($X, $Y){
+	-webkit-transform-origin: $X $Y;
+	-ms-transform-origin: $X $Y;
+	transform-origin: $X $Y;
+}
+
+@mixin smoothFont{
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+}
+
+@mixin unselectable{
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+	user-select: none;
+}
+
+@mixin drawShadow($xMove, $yMove, $blur, $spread, $color){
+	-webkit-box-shadow: $xMove $yMove $blur $spread $color;
+	-moz-box-shadow: $xMove $yMove $blur $spread $color;
+	box-shadow: $xMove $yMove $blur $spread $color;
+}
+
+@mixin innerShadow($xMove, $yMove, $blur, $spread, $color){
+	-webkit-box-shadow: inset $xMove $yMove $blur $spread $color;
+	-moz-box-shadow: inset $xMove $yMove $blur $spread $color;
+	box-shadow: inset $xMove $yMove $blur $spread $color;
+}
+
+@mixin blur($density){
+	-webkit-filter: blur($density);
+	-moz-filter: blur($density);
+	filter: blur($density);
+}
+
+@mixin flexIt{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+@mixin flexDirection-Vert{
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-moz-box-orient: vertical;
+	-moz-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+@mixin flexJustify{
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-flex: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
+}
+
+@mixin flexJustify-end{
+	-webkit-box-pack: end;
+	-webkit-justify-content: flex-end;
+	-moz-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+}
+
+@mixin flexAlign-baseline{
+	-webkit-box-align: baseline;
+	-webkit-align-items: baseline;
+	-moz-box-align: baseline;
+	-ms-flex-align: baseline;
+	align-items: baseline;
+}
+
+@mixin flexAlign-center{
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-moz-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+@mixin flexAlign-stretch{
+	-webkit-box-align: stretch;
+	-webkit-align-items: stretch;
+	-moz-box-align: stretch;
+	-ms-flex-align: stretch;
+	align-items: stretch
+}
+
+@mixin flexWrap{
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+}
+
+@mixin flexNoWrap{
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+		flex-wrap: nowrap;
+}
+
+@mixin flexShrink($proportion){
+	-webkit-flex-shrink: $proportion;
+	-ms-flex-negative: $proportion;
+	flex-shrink: $proportion;
+}
+
+@mixin linear-animation($name, $duration, $delay, $iterations, $direction){
+	-webkit-animation: $name $duration linear $delay $iterations $direction;
+	-moz-animation: $name $duration linear $delay $iterations $direction;
+	-o-animation: $name $duration linear $delay $iterations $direction;
+	animation: $name $duration linear $delay $iterations $direction;
+}
+
+@mixin ani-name($name){
+	-webkit-animation-name: $name;
+	-moz-animation-name: $name;
+	-o-animation-name: $name;
+	animation-name: $name;
+}
+
+@mixin ani-duration($duration){
+	-webkit-animation-duration: $duration;
+	-moz-animation-duration: $duration;
+	-o-animation-duration: $duration;
+	animation-duration: $duration;
+}
+
+@mixin ani-ease($ease){
+	-webkit-animation-timing-function: $ease;
+	-moz-animation-timing-function: $ease;
+	-o-animation-timing-function: $ease;
+	animation-timing-function: $ease;
+}
+
+@mixin ani-fillmode($mode){
+	-webkit-animation-fill-mode: $mode;
+	-moz-animation-fill-mode: $mode;
+	-o-animation-fill-mode: $mode;
+	animation-fill-mode: $mode;
+}
+
+@mixin ani-iteration($count){
+	-webkit-animation-iteration-count: $count;
+	-moz-animation-iteration-count: $count;
+	-o-animation-iteration-count: $count;
+	animation-iteration-count: $count;
+}
+
+@mixin ani-delay($delay){
+	-webkit-animation-delay: $delay;
+	-moz-animation-delay: $delay;
+	-o-animation-delay: $delay;
+	animation-delay: $delay;
+}
+
+@mixin ani-state($state){
+	-webkit-animation-play-state: $state;
+	-moz-animation-play-state: $state;
+	-o-animation-play-state: $state;
+	animation-play-state: $state;
+}
+
+@mixin ani-direction($direction){
+	-webkit-animation-direction: $direction;
+	-moz-animation-direction: $direction;
+	-o-animation-direction: $direction;
+	animation-direction: $direction;
+}
+
+@-webkit-keyframes rotation {
+	0% {
+		-webkit-transform: rotate(0deg);
+				transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+				transform: rotate(360deg);
+	}
+}
+@-moz-keyframes rotation {
+	0% {
+		-moz-transform: rotate(0deg);
+			 transform: rotate(0deg);
+	}
+	100% {
+		-moz-transform: rotate(360deg);
+			 transform: rotate(360deg);
+	}
+}
+@-o-keyframes rotation {
+	0% {
+		-o-transform: rotate(0deg);
+		   transform: rotate(0deg);
+	}
+	100% {
+		-o-transform: rotate(360deg);
+		   transform: rotate(360deg);
+	}
+}
+@keyframes rotation {
+	0% {
+		-webkit-transform: rotate(0deg);
+		   -moz-transform: rotate(0deg);
+			 -o-transform: rotate(0deg);
+				transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		   -moz-transform: rotate(360deg);
+			 -o-transform: rotate(360deg);
+				transform: rotate(360deg);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

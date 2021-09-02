@@ -1,0 +1,50 @@
+
+/* Text Alignment */
+$text-alignment-rules   : (left, right, center) !default;
+$text-bold-rules        : (200, 300, 400, 500, 600, 700, 800, 900) !default;
+
+
+@each $rule in $text-alignment-rules {
+    @each $breakpoint, $map in $page-breakpoints {
+        $id: map-get($map, classId);
+        $min-width: map-get($map, min-width);
+        // $max-width: map-get($map, max-width);
+
+        @if $breakpoint == mobile {
+            .textalign--#{$rule} {
+                text-align: $rule !important;
+            }
+        }
+            @else {
+                @media (min-width: #{$min-width}) {
+                    .textalign-#{$id}--#{$rule} {
+                        text-align: $rule !important;
+                    }
+                }
+            }
+    }
+}
+
+
+// Font Weight
+@each $rule in $text-bold-rules {
+    .textbold--#{$rule} {
+        font-weight: $rule;
+    }
+}
+
+
+// Font Transforms
+.texttransform--upper {
+    text-transform: uppercase;
+}
+
+
+// Text Color
+.textcolor--danger {
+    color: $brand-color--danger;
+}
+
+.paragraph {
+    margin-bottom: 25px;
+}

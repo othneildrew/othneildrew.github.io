@@ -54,6 +54,7 @@ Thumbs.db
 .settings
 .tmproj
 nbproject
+.idea
 
 # Runtime Data #
 ######################
