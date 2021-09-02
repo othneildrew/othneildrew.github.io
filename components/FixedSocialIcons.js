@@ -1,11 +1,12 @@
 
 import Link from 'next/link'
 import { createUseStyles } from 'react-jss'
-import { LinkedInIcon, GithubIcon, MailIcon } from './core/CustomIcons'
+import { LinkedInIcon, GithubIcon, MailIcon } from './core/CustomSvgs'
 
 
 const useStyles = createUseStyles({
     root: {
+        zIndex: 2000,
         position: 'fixed',
         left: 60,
         bottom: 0,
@@ -19,7 +20,7 @@ const useStyles = createUseStyles({
             position: 'absolute',
             width: 2,
             height: 103,
-            backgroundColor: 'red',
+            // backgroundColor: 'red',
         },
     },
     iconWrapper: {

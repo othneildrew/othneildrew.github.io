@@ -1,14 +1,18 @@
 
 import Link from 'next/link'
 import { createUseStyles, useTheme } from 'react-jss'
+import { FloatingMoon } from './core/CustomSvgs';
 
 
 const useStyles = createUseStyles({
     root: {
+        position: 'relative',
         // flex: 1,
         // backgroundColor: 'brown',
+        // border: '1px solid yellow',
         width: '100%',
         height: '100vh',
+
     },
     innerWrapper: {
         display: 'flex',
@@ -54,11 +58,11 @@ const Hero = () => {
                         <div className='og-col-24 og-col-md-20'>
                             <p className={classes.headline}>Full Stack Developer &nbsp; | &nbsp; UI/UX Pro</p>
                             <h1 className={classes.title}>Othneil Drew</h1>
-                            <p className={classes.subtitle}>I create amazing<br /> experiences fro the web.</p>
+                            <p className={classes.subtitle}>I create amazing<br /> experiences for the web.</p>
 
                             <div className={classes.btnContainer}>
                                 <Link href='#'>
-                                    <button role='link' className='btn btn--filled btn--primary'>Hire Me</button>
+                                    <button role='link' className='btn btn--filled btn--primary btn--md'>Hire Me</button>
                                 </Link>
 
                                 <Link href='/resume'>
@@ -69,6 +73,14 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
+
+            <FloatingMoon style={{
+                zIndex: -10,
+                position: 'absolute',
+                right: '-10%',
+                bottom: '-50%',
+                border: '1px solid green',
+            }} />
         </section>
     )
 }

@@ -7,7 +7,7 @@ import { createUseStyles } from 'react-jss'
 
 const useStyles = createUseStyles({
     main: {
-        border: '1px solid red',
+        // border: '1px solid red',
         minHeight: '100vh',
     },
 })
