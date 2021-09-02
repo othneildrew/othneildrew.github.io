@@ -16,6 +16,7 @@ tmp/
 *.exe
 *.o
 *.so
+.next/
 
 # Packages #
 ############
