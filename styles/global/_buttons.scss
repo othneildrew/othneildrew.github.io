@@ -1,18 +1,29 @@
 
 .btn {
+    cursor: pointer;
+    padding: 14px 28px;
     outline: none;
     border: none;
-    min-width: 160px;
-    min-height: 50px;
+    text-decoration: none;
+    //min-width: 160px;
+    //min-height: 50px;
     border-radius: 28px;
     font-size: 1.125em;
+    font-weight: 500;
 
     &--primary {
+        border: 1px solid $brand-color--primary;
         background-color: $brand-color--primary;
-        color: $color--black;
+        color: $color--white;
     }
 
     &--outlined {
+        border: 1px solid $brand-color--primary;
+        background-color: transparent;
+        color: rgba(255, 255, 255, 0.7);
+    }
 
+    &--md {
+        padding: 14px 42px;
     }
 }

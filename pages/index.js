@@ -1,7 +1,10 @@
 
 import Head from 'next/head'
 import Hero from '../components/Hero'
+import ContentSection from '../components/core/ContentSection'
 import FixedSocialIcons from '../components/FixedSocialIcons'
+import CommunityProjectGrid from '../components/CommunityProjectGrid'
+import TestGrid24 from '../components/debug/TestGrid24';
 
 
 export default function Home() {
@@ -26,49 +29,147 @@ export default function Home() {
 
 
 
+            <section style={{marginTop: 644,border: '1px solid transparent'}}>
+                <h2>Latest Work</h2>
 
-            <div
-                className='og-container fortest view-padding'
+                <div className='og-container'>
+                    <div className='og-row'>
+                        <div className='og-col-12'>
+                            <div className='project__img-container'>
+                                <img src='https://via.placeholder.com' alt='' />
+                            </div>
+
+                            <div>
+                                <span className='tag'>Laravel</span>
+                            </div>
+                        </div>
+                        <div className='og-col-12'>
+                            <p>Alpha Space Launch</p>
+                            <p>An unreleased website where customers can send class rings and other paraphernalia to space and receive a certificate of flight, photos, plaque and other items. (Canceled by client for lack of market).</p>
+                            <div className='project__btn-container'>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section
                 style={{
-                    position: 'absolute',
-                    bottom: 0,
-                    left: 0,
-                    width: '100%',
-                    // backgroundColor: 'green',
-                    opacity: 0.4,
+                    padding: '600px 0',
+                    border: '1px solid orange',
                 }}
             >
-                <div className='og-row'>
-                    <div className='og-col-1' />
-                    <div className='og-col-1' />
-                    <div className='og-col-1' />
-                    <div className='og-col-1' />
-                    <div className='og-col-1' />
-                    <div className='og-col-1' />
-                    <div className='og-col-1' />
-                    <div className='og-col-1' />
-                    <div className='og-col-1' />
-                    <div className='og-col-1' />
-                    <div className='og-col-1' />
-                    <div className='og-col-1' />
-                    <div className='og-col-1' />
-                    <div className='og-col-1' />
-                    <div className='og-col-1' />
-                    <div className='og-col-1' />
-                    <div className='og-col-1' />
-                    <div className='og-col-1' />
-                    <div className='og-col-1' />
-                    <div className='og-col-1' />
-                    <div className='og-col-1' />
-                    <div className='og-col-1' />
-                    <div className='og-col-1' />
-                    <div className='og-col-1' />
-                </div>
-            </div>
+                <h2 className='h2 textalign--center pb-8'>Community Projects</h2>
+
+                <CommunityProjectGrid projects={[
+                        {
+                            name: 'Best-README-Template',
+                            description: 'An awesome README template to jumpstart your projects!',
+                            forks: '8.5K',
+                            stars: '3.6K',
+                            contributors: '7',
+                            links: {
+                                github: '',
+                                demo: '',
+                            }
+                        },
+                        {
+                            name: 'Best-README-Template',
+                            description: 'An awesome README template to jumpstart your projects!',
+                            forks: '8.5K',
+                            stars: '3.6K',
+                            contributors: '7',
+                            links: {
+                                github: '',
+                                demo: '',
+                            }
+                        },
+                        {
+                            name: 'Best-README-Template',
+                            description: 'An awesome README template to jumpstart your projects!',
+                            forks: '8.5K',
+                            stars: '3.6K',
+                            contributors: '7',
+                            links: {
+                                github: '',
+                                demo: null,
+                            }
+                        }
+                    ]} />
+            </section>
+
+
+
+            <ContentSection
+                topPadding={400}
+                bottomPadding={200}
+            >
+                <h2 className='h2 textalign--center pb-8'>Community Projects</h2>
+
+                <CommunityProjectGrid projects={[
+                    {
+                        name: 'Best-README-Template',
+                        description: 'An awesome README template to jumpstart your projects!',
+                        forks: '8.5K',
+                        stars: '3.6K',
+                        contributors: '7',
+                        links: {
+                            github: '',
+                            demo: '',
+                        }
+                    },
+                    {
+                        name: 'Best-README-Template',
+                        description: 'An awesome README template to jumpstart your projects!',
+                        forks: '8.5K',
+                        stars: '3.6K',
+                        contributors: '7',
+                        links: {
+                            github: '',
+                            demo: '',
+                        }
+                    },
+                    {
+                        name: 'Best-README-Template',
+                        description: 'An awesome README template to jumpstart your projects!',
+                        forks: '8.5K',
+                        stars: '3.6K',
+                        contributors: '7',
+                        links: {
+                            github: '',
+                            demo: null,
+                        }
+                    }
+                ]} />
+            </ContentSection>
+
+
+
+
 
 
 
             <FixedSocialIcons />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <TestGrid24 />
+
+
+
         </>
     )
 
