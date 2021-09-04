@@ -4,10 +4,21 @@ import Hero from '../components/Hero'
 import ContentSection from '../components/core/ContentSection'
 import FixedSocialIcons from '../components/FixedSocialIcons'
 import CommunityProjectGrid from '../components/CommunityProjectGrid'
-import TestGrid24 from '../components/debug/TestGrid24';
+import TestGrid24 from '../components/debug/TestGrid24'
+import projects from '../public/data/projects.json'
+import testimonials from '../public/data/testimonials.json'
 
 
-export default function Home() {
+export async function getStaticProps() {
+    return {
+        props: {
+            projects,
+            testimonials,
+        },
+    }
+}
+
+export default function Home({projects}) {
 
 
     return (
@@ -27,6 +38,8 @@ export default function Home() {
 
 
 
+
+            {JSON.stringify(projects)}
 
 
             <section style={{marginTop: 644,border: '1px solid transparent'}}>
@@ -108,41 +121,7 @@ export default function Home() {
             >
                 <h2 className='h2 textalign--center pb-8'>Community Projects</h2>
 
-                <CommunityProjectGrid projects={[
-                    {
-                        name: 'Best-README-Template',
-                        description: 'An awesome README template to jumpstart your projects!',
-                        forks: '8.5K',
-                        stars: '3.6K',
-                        contributors: '7',
-                        links: {
-                            github: '',
-                            demo: '',
-                        }
-                    },
-                    {
-                        name: 'Best-README-Template',
-                        description: 'An awesome README template to jumpstart your projects!',
-                        forks: '8.5K',
-                        stars: '3.6K',
-                        contributors: '7',
-                        links: {
-                            github: '',
-                            demo: '',
-                        }
-                    },
-                    {
-                        name: 'Best-README-Template',
-                        description: 'An awesome README template to jumpstart your projects!',
-                        forks: '8.5K',
-                        stars: '3.6K',
-                        contributors: '7',
-                        links: {
-                            github: '',
-                            demo: null,
-                        }
-                    }
-                ]} />
+                <CommunityProjectGrid projects={projects.openSource} />
             </ContentSection>
 
 
