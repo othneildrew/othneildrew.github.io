@@ -15,6 +15,8 @@ const useStyles = createUseStyles({
         // border: '1px solid orange',
         textAlign: 'center',
 
+
+
         '&::after': {
             content: '',
             position: 'absolute',

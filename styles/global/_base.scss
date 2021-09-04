@@ -3,7 +3,35 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    //scrollbar-width: auto;
+    // scrollbar-width: thin;
+    //scrollbar-color: rgba(240, 77, 78, 0.6) $bg-color;
 }
+
+*::-webkit-scrollbar {
+    // width: 7px;
+    width: 17px;
+}
+
+*::-webkit-scrollbar-track {
+    background: $bg-color;
+    //background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.4);
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.6);
+        @include transitions-ease(0.4s);
+    }
+
+    &:active {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+}
+
 
 body {
     background-color: $bg-color;

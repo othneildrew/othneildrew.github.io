@@ -55,58 +55,59 @@ export default function Home() {
             </section>
 
 
-            <section
-                style={{
-                    padding: '600px 0',
-                    border: '1px solid orange',
-                }}
-            >
-                <h2 className='h2 textalign--center pb-8'>Community Projects</h2>
+            {/*<section*/}
+            {/*    style={{*/}
+            {/*        padding: '600px 0',*/}
+            {/*        border: '1px solid orange',*/}
+            {/*    }}*/}
+            {/*>*/}
+            {/*    <h2 className='h2 textalign--center pb-8'>Community Projects</h2>*/}
 
-                <CommunityProjectGrid projects={[
-                        {
-                            name: 'Best-README-Template',
-                            description: 'An awesome README template to jumpstart your projects!',
-                            forks: '8.5K',
-                            stars: '3.6K',
-                            contributors: '7',
-                            links: {
-                                github: '',
-                                demo: '',
-                            }
-                        },
-                        {
-                            name: 'Best-README-Template',
-                            description: 'An awesome README template to jumpstart your projects!',
-                            forks: '8.5K',
-                            stars: '3.6K',
-                            contributors: '7',
-                            links: {
-                                github: '',
-                                demo: '',
-                            }
-                        },
-                        {
-                            name: 'Best-README-Template',
-                            description: 'An awesome README template to jumpstart your projects!',
-                            forks: '8.5K',
-                            stars: '3.6K',
-                            contributors: '7',
-                            links: {
-                                github: '',
-                                demo: null,
-                            }
-                        }
-                    ]} />
-            </section>
+            {/*    <CommunityProjectGrid projects={[*/}
+            {/*            {*/}
+            {/*                name: 'Best-README-Template',*/}
+            {/*                description: 'An awesome README template to jumpstart your projects!',*/}
+            {/*                forks: '8.5K',*/}
+            {/*                stars: '3.6K',*/}
+            {/*                contributors: '7',*/}
+            {/*                links: {*/}
+            {/*                    github: '',*/}
+            {/*                    demo: '',*/}
+            {/*                }*/}
+            {/*            },*/}
+            {/*            {*/}
+            {/*                name: 'Best-README-Template',*/}
+            {/*                description: 'An awesome README template to jumpstart your projects!',*/}
+            {/*                forks: '8.5K',*/}
+            {/*                stars: '3.6K',*/}
+            {/*                contributors: '7',*/}
+            {/*                links: {*/}
+            {/*                    github: '',*/}
+            {/*                    demo: '',*/}
+            {/*                }*/}
+            {/*            },*/}
+            {/*            {*/}
+            {/*                name: 'Best-README-Template',*/}
+            {/*                description: 'An awesome README template to jumpstart your projects!',*/}
+            {/*                forks: '8.5K',*/}
+            {/*                stars: '3.6K',*/}
+            {/*                contributors: '7',*/}
+            {/*                links: {*/}
+            {/*                    github: '',*/}
+            {/*                    demo: null,*/}
+            {/*                }*/}
+            {/*            }*/}
+            {/*        ]} />*/}
+            {/*</section>*/}
 
 
 
             <ContentSection
-                topPadding={400}
-                bottomPadding={200}
+                topPadding={600}
+                bottomPadding={300}
+                titleText='Community Projects'
             >
-                <h2 className='h2 textalign--center pb-8'>Community Projects</h2>
+                {/*<h2 className='h2 textalign--center pb-8'>Community Projects</h2>*/}
 
                 <CommunityProjectGrid projects={[
                     {
@@ -143,6 +144,15 @@ export default function Home() {
                         }
                     }
                 ]} />
+            </ContentSection>
+
+
+            <ContentSection
+                topPadding={69}
+                bottomPadding={600}
+                titleText='Testimonials'
+            >
+
             </ContentSection>
 
 
