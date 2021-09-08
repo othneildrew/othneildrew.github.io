@@ -16,8 +16,8 @@ const CommunityProjectGrid = ({projects}) => {
         <div className='og-container'>
             <div className='og-row'>
                 {projects && projects.map((project, i) => (
-                    <div className='og-col-6'>
-                        <CommunityProjectCard key={i} data={project} />
+                    <div className='og-col-6' key={i}>
+                        <CommunityProjectCard data={project} />
                     </div>
                 ))}
             </div>

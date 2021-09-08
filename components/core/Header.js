@@ -2,9 +2,10 @@
 import Link from 'next/link'
 import { createUseStyles } from 'react-jss'
 import { CodeIcon } from './CustomSvgs'
+import MenuIcon from './MenuIcon'
 
 
-const useStyles = createUseStyles({
+const useStyles = createUseStyles((theme) => ({
     root: {
         zIndex: 20000,
         display: 'flex',
@@ -12,10 +13,20 @@ const useStyles = createUseStyles({
         alignItems: 'center',
         position: 'absolute',
         top: 0,
-        padding: '30px 60px',
+        padding: '15px 20px',
         width: '100%',
         // backgroundColor: 'pink',
         // opacity: 0.4,
+
+        [theme.breakpoints.up('md')]: {
+            padding: 30,
+            // backgroundColor: 'red',
+        },
+
+        [theme.breakpoints.up('lg')]: {
+            padding: '30px 60px',
+            // backgroundColor: 'red',
+        },
     },
     innerWrapper: {
         // backgroundColor: 'orange',
@@ -28,7 +39,13 @@ const useStyles = createUseStyles({
         // backgroundColor: 'green',
 
     },
-})
+    nav: {
+        display: 'none',
+    },
+    menu: {
+
+    },
+}))
 
 const Header = () => {
     const classes = useStyles()
@@ -42,16 +59,20 @@ const Header = () => {
                     </a>
                 </Link>
 
-                <nav>
+                <nav className={classes.nav}>
                     <a>Latest Work</a>
                     <a>Skills</a>
                     <a>Testimonials</a>
                     <a>Projects</a>
                 </nav>
 
-                <Link href='/resume'>
-                    <a className='btn btn--outlined btn--primary'>Resume</a>
-                </Link>
+                <div style={{display:'flex',alignItems:'center'}}>
+                    <Link href='/resume'>
+                        <a className='btn btn--outlined btn--primary'>Resume</a>
+                    </Link>
+
+                    <MenuIcon open={false} />
+                </div>
             </div>
         </header>
     )

@@ -1,5 +1,5 @@
 # TODOs
-- update readme template to newest one
+- update readme template to the newest one
 - download all assets and designs
 - web page layout
 - web page animations

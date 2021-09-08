@@ -11,6 +11,23 @@
     font-size: 1.125em;
     font-weight: 500;
 
+    &--md {
+        padding: 14px 42px;
+    }
+
+    &--block {
+        display: block;
+    }
+
+    &--icon {
+        display: flex;
+        align-items: center;
+
+        svg {
+            margin-right: 16px;
+        }
+    }
+
     &--primary {
         border: 1px solid $brand-color--primary;
         background-color: $brand-color--primary;
@@ -21,9 +38,7 @@
         border: 1px solid $brand-color--primary;
         background-color: transparent;
         color: rgba(255, 255, 255, 0.7);
+        font-weight: 400;
     }
 
-    &--md {
-        padding: 14px 42px;
-    }
 }

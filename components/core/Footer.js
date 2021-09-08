@@ -7,6 +7,7 @@ const Footer = () => {
             style={{
                 padding: '40px 0',
                 // border: '1px solid green',
+                backgroundColor: '#2648FE',
                 textAlign: 'center',
             }}
         >

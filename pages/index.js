@@ -1,5 +1,8 @@
 
+import { useEffect } from 'react'
+import { useTheme } from 'react-jss'
 import Head from 'next/head'
+import Link from 'next/link'
 import Hero from '../components/Hero'
 import ContentSection from '../components/core/ContentSection'
 import FixedSocialIcons from '../components/FixedSocialIcons'
@@ -7,6 +10,7 @@ import CommunityProjectGrid from '../components/CommunityProjectGrid'
 import TestGrid24 from '../components/debug/TestGrid24'
 import projects from '../public/data/projects.json'
 import testimonials from '../public/data/testimonials.json'
+import {LinkedInIcon, MailIcon, PhoneIcon} from '../components/core/CustomSvgs'
 
 
 export async function getStaticProps() {
@@ -19,6 +23,28 @@ export async function getStaticProps() {
 }
 
 export default function Home({projects}) {
+    const theme = useTheme()
+
+    useEffect(() => {
+        console.log('%c \n' +
+            ' /$$   /$$           /$$ /$$                 /$$      /$$                     /$$       /$$\n' +
+            '| $$  | $$          | $$| $$                | $$  /$ | $$                    | $$      | $$\n' +
+            '| $$  | $$  /$$$$$$ | $$| $$  /$$$$$$       | $$ /$$$| $$  /$$$$$$   /$$$$$$ | $$  /$$$$$$$\n' +
+            '| $$$$$$$$ /$$__  $$| $$| $$ /$$__  $$      | $$/$$ $$ $$ /$$__  $$ /$$__  $$| $$ /$$__  $$\n' +
+            '| $$__  $$| $$$$$$$$| $$| $$| $$  \\ $$      | $$$$_  $$$$| $$  \\ $$| $$  \\__/| $$| $$  | $$\n' +
+            '| $$  | $$| $$_____/| $$| $$| $$  | $$      | $$$/ \\  $$$| $$  | $$| $$      | $$| $$  | $$\n' +
+            '| $$  | $$|  $$$$$$$| $$| $$|  $$$$$$/      | $$/   \\  $$|  $$$$$$/| $$      | $$|  $$$$$$$\n' +
+            '|__/  |__/ \\_______/|__/|__/ \\______/       |__/     \\__/ \\______/ |__/      |__/ \\_______/\n' +
+            '                                                                                           \n', 'color: #140033')
+        console.log('%c Software development as we know it is changing rapidly! More than ever, you need someone on your team who can adapt, learn quickly and continue to bring fresh ideas to the table.', 'color: #140033')
+        console.log('%c Time is money; You\'ve made it this far, let\'s setup an interview.', 'background-color: #b65296; color: #ffffff; font-weight: bold')
+        console.log('\t%c Othneil Drew - Full Stack Developer (Houston, TX | Remote)', 'font-weight: bold')
+        console.log(
+            '\t  -> Resume: https://othneildrew.com/resume\n' +
+            '\t  -> LinkedIn: https://linked.com/in/othneildrew\n' +
+            '\t  -> Email: othneild@gmail.com\n'
+        )
+    }, [])
 
 
     return (
@@ -26,7 +52,7 @@ export default function Home({projects}) {
             <Head>
                 {/*Meta*/}
                 <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no' />
-                <title>Othneil Drew - Full Stack Developer - Houston, TX</title>
+                <title>Othneil Drew - Full Stack Developer (Houston, TX | Remote)</title>
                 
                 {/*SEO*/}
                 <meta name='description' content="Houston-based Full Stack Developer focusing on creating bold, unique, and amazing web experiences that help 10x your business' growth." />
@@ -34,12 +60,13 @@ export default function Home({projects}) {
                 <meta name='author' content='Othneil I Drew' />
             </Head>
 
+            <FixedSocialIcons />
             <Hero />
 
 
 
 
-            {JSON.stringify(projects)}
+            {/*{JSON.stringify(projects)}*/}
 
 
             <section style={{marginTop: 644,border: '1px solid transparent'}}>
@@ -68,50 +95,8 @@ export default function Home({projects}) {
             </section>
 
 
-            {/*<section*/}
-            {/*    style={{*/}
-            {/*        padding: '600px 0',*/}
-            {/*        border: '1px solid orange',*/}
-            {/*    }}*/}
-            {/*>*/}
-            {/*    <h2 className='h2 textalign--center pb-8'>Community Projects</h2>*/}
 
-            {/*    <CommunityProjectGrid projects={[*/}
-            {/*            {*/}
-            {/*                name: 'Best-README-Template',*/}
-            {/*                description: 'An awesome README template to jumpstart your projects!',*/}
-            {/*                forks: '8.5K',*/}
-            {/*                stars: '3.6K',*/}
-            {/*                contributors: '7',*/}
-            {/*                links: {*/}
-            {/*                    github: '',*/}
-            {/*                    demo: '',*/}
-            {/*                }*/}
-            {/*            },*/}
-            {/*            {*/}
-            {/*                name: 'Best-README-Template',*/}
-            {/*                description: 'An awesome README template to jumpstart your projects!',*/}
-            {/*                forks: '8.5K',*/}
-            {/*                stars: '3.6K',*/}
-            {/*                contributors: '7',*/}
-            {/*                links: {*/}
-            {/*                    github: '',*/}
-            {/*                    demo: '',*/}
-            {/*                }*/}
-            {/*            },*/}
-            {/*            {*/}
-            {/*                name: 'Best-README-Template',*/}
-            {/*                description: 'An awesome README template to jumpstart your projects!',*/}
-            {/*                forks: '8.5K',*/}
-            {/*                stars: '3.6K',*/}
-            {/*                contributors: '7',*/}
-            {/*                links: {*/}
-            {/*                    github: '',*/}
-            {/*                    demo: null,*/}
-            {/*                }*/}
-            {/*            }*/}
-            {/*        ]} />*/}
-            {/*</section>*/}
+
 
 
 
@@ -123,6 +108,10 @@ export default function Home({projects}) {
                 {/*<h2 className='h2 textalign--center pb-8'>Community Projects</h2>*/}
 
                 <CommunityProjectGrid projects={projects.openSource} />
+
+
+
+                <TestGrid24 />
             </ContentSection>
 
 
@@ -135,12 +124,53 @@ export default function Home({projects}) {
             </ContentSection>
 
 
+            <ContentSection
+                topPadding={700}
+                bottomPadding={150}
+                titleText='Interested in working together?'
+                overrideTitlePadding={theme.spacing(0, 0, 2, 0)}
+            >
+                <p style={{textAlign:'center',fontSize:'1.125em',opacity:0.7}}>Let's talk about your next project or role!</p>
+
+                <div className='og-container mt-18'>
+                    <div className='og-row'>
+                        <div className='offset-md-3 og-col-md-9' style={{border: '1px solid pink'}}>
+                            <p>rocket goes here</p>
+                        </div>
+                        <div className='og-col-md-7 offset-md-1' style={{border: '1px solid red'}}>
+                            <Link href='/'>
+                                <a className='my-7 btn btn--outlined btn--light btn--block btn--icon'><LinkedInIcon /> Connect on LinkedIn</a>
+                            </Link>
+
+                            <Link href='/'>
+                                <a className='my-7 btn btn--outlined btn--light btn--block btn--icon'><PhoneIcon /> Connect via phone</a>
+                            </Link>
+
+                            <Link href='/'>
+                                <a className='my-7 btn btn--outlined btn--light btn--block btn--icon'><MailIcon /> Send an Email</a>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+
+                <TestGrid24 />
+
+                <div
+                    style={{
+                        zIndex: -10,
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        width: '100%',
+                        height: '100%',
+                        background: 'linear-gradient(180deg, #140033 0%, #2648FE 100%)',
+                    }}
+                />
+            </ContentSection>
 
 
 
 
-
-            <FixedSocialIcons />
 
 
 
@@ -156,6 +186,8 @@ export default function Home({projects}) {
 
 
             <TestGrid24 />
+
+            {/*<TestGrid24 />*/}
 
 
 

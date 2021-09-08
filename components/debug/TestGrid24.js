@@ -3,7 +3,7 @@ const TestGrid24 = () => (
     <div
         className='og-container fortest view-padding'
         style={{
-            position: 'fixed',
+            position: 'absolute',
             bottom: 0,
             left: 0,
             width: '100%',

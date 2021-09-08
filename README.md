@@ -104,6 +104,7 @@ Project Link: [https://github.com/othneildrew/othneildrew.github.io](https://git
 * [FakeLoader.js](https://joaopereirawd.github.io/fakeLoader.js)
 * [WOW.js](https://www.delac.io/wow)
 * [EZGif.com](https://ezgif.com/maker)
+* [Text to ASCII Art Generator](https://patorjk.com/software/taag/#p=display&f=Big%20Money-ne&t=Hello%20World)
 
 
 
