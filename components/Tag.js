@@ -1,8 +1,8 @@
 
-import { createUseStyles } from 'react-jss'
+import { makeStyles } from '@material-ui/core'
 
 
-const useStyles = createUseStyles({
+const useStyles = makeStyles({
     root: {
         display: 'inline-block',
         padding: '5px 16px',

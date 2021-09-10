@@ -1,9 +1,9 @@
 
-import { createUseStyles } from 'react-jss'
+import { makeStyles } from '@material-ui/core'
 import CommunityProjectCard from './CommunityProjectCard'
 
 
-const useStyles = createUseStyles((theme) => ({
+const useStyles = makeStyles((theme) => ({
     root: {
 
     },
@@ -13,15 +13,21 @@ const useStyles = createUseStyles((theme) => ({
         justifyContent: 'center',
         gridGap: 14,
         // backgroundColor: 'orange',
-        // border: '1px dashed green',
+        border: '1px dashed green',
 
-        [theme.breakpoints.up('sm')]: {
-            gridTemplateColumns: 'repeat(2, 1fr)',
-            // borderColor: 'red',
+        ['@media (min-width: 768px)']: {
+            // gridTemplateColumns: 'repeat(3, 33.333%)',
+            gridTemplateColumns: 'repeat(2, 50%)',
+            borderColor: 'pink',
+            // display: 'none',
+        },
+        [theme.breakpoints.up('md')]: {
+            // gridTemplateColumns: 'repeat(2, 50%)',
+            borderColor: 'red',
         },
         [theme.breakpoints.up('lg')]: {
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            // borderColor: 'red',
+            gridTemplateColumns: 'repeat(3, 33.333%)',
+            borderColor: 'orange',
         },
     }
 }))

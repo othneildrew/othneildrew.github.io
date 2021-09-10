@@ -1,20 +1,19 @@
 
+import projects from '../public/data/projects.json'
+import testimonials from '../public/data/testimonials.json'
 import { useEffect } from 'react'
-import { useTheme } from 'react-jss'
 import Head from 'next/head'
 import Link from 'next/link'
 import Hero from '../components/Hero'
 import ContentSection from '../components/core/ContentSection'
 import FixedSocialIcons from '../components/FixedSocialIcons'
 import CommunityProjectGrid from '../components/CommunityProjectGrid'
-import TestGrid24 from '../components/debug/TestGrid24'
-import projects from '../public/data/projects.json'
-import testimonials from '../public/data/testimonials.json'
 import { LinkedInIcon, MailIcon, PhoneIcon } from '../components/core/CustomSvgs'
 import useDarkMode from '../utils/hooks/useDarkMode'
 import { logHireMeAscii } from '../utils/Utils'
 import Slider from '../components/Slider'
 import SliderCard from '../components/SliderCard'
+import { useTheme } from '@material-ui/core'
 
 
 export async function getStaticProps() {
@@ -53,8 +52,6 @@ export default function Home({projects}) {
 
 
 
-            {/*{JSON.stringify(projects)}*/}
-
             <ContentSection
                 topPadding={700}
                 bottomPadding={0}
@@ -63,7 +60,6 @@ export default function Home({projects}) {
 
 
 
-                <TestGrid24 />
             </ContentSection>
 
 
@@ -111,7 +107,6 @@ export default function Home({projects}) {
                 titleText='Community Projects'
             >
                 <CommunityProjectGrid projects={projects.openSource} />
-                {/*<TestGrid24 />*/}
             </ContentSection>
 
 
@@ -120,17 +115,17 @@ export default function Home({projects}) {
                 bottomPadding={600}
                 titleText='Testimonials'
             >
-                <Slider>
-                    {testimonials.data.map((t) => (
-                        <SliderCard
-                            quote={t.quote}
-                            author={t.author}
-                        />
-                    ))}
-                </Slider>
+                {/*<Slider>*/}
+                {/*    {testimonials.data.map((t, i) => (*/}
+                {/*        <SliderCard*/}
+                {/*            key={i}*/}
+                {/*            quote={t.quote}*/}
+                {/*            author={t.author}*/}
+                {/*        />*/}
+                {/*    ))}*/}
+                {/*</Slider>*/}
 
 
-                <TestGrid24 />
             </ContentSection>
 
 
@@ -190,14 +185,6 @@ export default function Home({projects}) {
 
 
 
-
-
-
-
-
-            {/*<TestGrid24 />*/}
-
-            {/*<TestGrid24 />*/}
 
 
 

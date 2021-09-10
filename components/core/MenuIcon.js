@@ -1,9 +1,9 @@
 
-import { createUseStyles } from 'react-jss'
+import { makeStyles } from '@material-ui/core'
 import clsx from 'clsx'
 
 
-const useStyles = createUseStyles({
+const useStyles = makeStyles({
     root: {
         display: 'flex',
         flexDirection: 'column',

@@ -1,11 +1,11 @@
 
 import Link from 'next/link'
-import { createUseStyles, useTheme } from 'react-jss'
+import { makeStyles, useTheme } from '@material-ui/core'
 import { CodeIcon } from './CustomSvgs'
 import MenuIcon from './MenuIcon'
 import useMediaQuery from '../../utils/hooks/useMediaQuery'
 
-const useStyles = createUseStyles((theme) => ({
+const useStyles = makeStyles((theme) => ({
     root: {
         zIndex: 2000,
         display: 'flex',

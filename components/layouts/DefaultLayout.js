@@ -2,10 +2,10 @@
 import { useState } from 'react'
 import Header from '../core/Header'
 import Footer from '../core/Footer'
-import { createUseStyles } from 'react-jss'
+import { makeStyles } from '@material-ui/core'
 
 
-const useStyles = createUseStyles({
+const useStyles = makeStyles({
     main: {
         // border: '1px solid red',
         minHeight: '100vh',

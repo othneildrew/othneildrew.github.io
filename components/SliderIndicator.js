@@ -1,8 +1,8 @@
 
 import { useState } from 'react'
-import { createUseStyles } from 'react-jss'
+import { makeStyles } from '@material-ui/core'
 
-const useStyles = createUseStyles({
+const useStyles = makeStyles({
     root: {
 
     },

@@ -1,11 +1,14 @@
 
-import { createUseStyles, useTheme } from 'react-jss'
+import { makeStyles, useTheme } from '@material-ui/core'
 
 
-const useStyles = createUseStyles({
+const useStyles = makeStyles({
     root: {
         position: 'relative',
+        width: '100%',
+        maxWidth: '100%',
         border: '2px dashed green',
+
     },
     sectionHead: {
 

@@ -1,10 +1,10 @@
 
 import Link from 'next/link'
-import { createUseStyles, useTheme } from 'react-jss'
+import { makeStyles, useTheme } from '@material-ui/core'
 import { FloatingMoon } from './core/CustomSvgs';
 
 
-const useStyles = createUseStyles((theme) => ({
+const useStyles = makeStyles((theme) => ({
     root: {
         position: 'relative',
         // flex: 1,
@@ -126,9 +126,9 @@ const Hero = () => {
                 </div>
             </div>
 
-            <div className={classes.floatingMoon}>
-                <FloatingMoon style={{height:'100%',width:'auto'}} />
-            </div>
+            {/*<div className={classes.floatingMoon}>*/}
+            {/*    <FloatingMoon style={{height:'100%',width:'auto'}} />*/}
+            {/*</div>*/}
         </section>
     )
 }

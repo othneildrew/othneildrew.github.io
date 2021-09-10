@@ -1,42 +1,53 @@
 
+import React from 'react'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { SheetsRegistry, JssProvider, createGenerateId } from 'react-jss'
+import { ServerStyleSheets } from '@material-ui/core'
+
 
 class MyDocument extends Document {
     static async getInitialProps(ctx) {
         /**
-         * This fixes NextJS and react-jss integration issues.
-         * NextJS uses _app to initialize pages, but doesn't get the whole App component,
-         * only the page component. So only the stylesheets of the current page
-         * be caught by the SheetsRegistry causing an issues where styles are not
-         * being loaded. This fix also allows pages to still be statically generated,
-         * a benefit of using NextJS altogether.
+         * RESOLUTION ORDER
+         * https://github.com/mui-org/material-ui/blob/master/examples/nextjs/pages/_document.js
+         * On the server:
+         * 1. app.getInitialProps
+         * 2. page.getInitialProps
+         * 3. document.getInitialProps
+         * 4. app.render
+         * 5. page.render
+         * 6. document.render
          *
-         * Credit: https://medium.com/wesionary-team/implementing-react-jss-on-next-js-projects-7ceaee985cad
+         *
+         * On the server with error:
+         * 1. document.getInitialProps
+         * 2. app.render
+         * 3. page.render
+         * 4. document.render
+         *
+         *
+         * On the client:
+         * 1. app.getInitialProps
+         * 2. page.getInitialProps
+         * 3. app.render
+         * 4. page.render
+         *
          */
-        const registry = new SheetsRegistry()
-        const generateId = createGenerateId()
-        const originalRenderPage = ctx.renderPage
 
-        ctx.renderPage = () => (
-            originalRenderPage({
-                enhanceApp: (App) => (props) => (
-                    <JssProvider registry={registry} generateId={generateId}>
-                        <App {...props} />
-                    </JssProvider>
-                )
+        // Render app and page and get the context of the page with collected side effects.
+        const sheets = new ServerStyleSheets()
+        const originRenderPage = ctx.renderPage
+
+        ctx.renderPage = () => {
+            return originRenderPage({
+                enhanceApp: (App) => (props) => sheets.collect(<App {...props} />)
             })
-        )
+        }
 
         const initialProps = await Document.getInitialProps(ctx)
         return {
             ...initialProps,
-            styles: (
-                <>
-                    {initialProps.styles}
-                    <style id='server-side-styles'>{registry.toString()}</style>
-                </>
-            )
+            // Styles fragment is rendered after the app and page rendering finishes.
+            styles: [...React.Children.toArray(initialProps.styles), sheets.getStyleElement()],
         }
     }
 
@@ -46,6 +57,8 @@ class MyDocument extends Document {
                 <Head>
                     {/*Meta*/}
                     <meta charSet='utf-8' />
+                    <meta name='viewport' content='minimum-scale=1, initial-scale=1, width=device-width' />
+                    <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
 
                     {/*Fonts*/}
                     <link rel='preconnect' href='https://fonts.googleapis.com' />

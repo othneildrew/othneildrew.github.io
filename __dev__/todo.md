@@ -1,4 +1,6 @@
 # TODOs
+- import and customize theme
+- switch all react-jss styles to use material-ui/core
 - update readme template to the newest one
 - download all assets and designs
 - web page layout

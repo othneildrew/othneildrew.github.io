@@ -1,10 +1,10 @@
 
 import Link from 'next/link'
-import { createUseStyles } from 'react-jss'
 import { LinkedInIcon, GithubIcon, MailIcon } from './core/CustomSvgs'
+import { makeStyles } from '@material-ui/core'
 
 
-const useStyles = createUseStyles((theme) => ({
+const useStyles = makeStyles((theme) => ({
     root: {
         zIndex: 2000,
         position: 'fixed',

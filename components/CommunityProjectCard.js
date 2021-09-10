@@ -1,8 +1,8 @@
 
-import { createUseStyles } from 'react-jss'
-import {ExternalLinkIcon, GithubIcon, LinkedInIcon, SourceForkIcon, StarIcon, UsersIcon} from './core/CustomSvgs'
+import { makeStyles } from '@material-ui/core'
+import { ExternalLinkIcon, GithubIcon, LinkedInIcon, SourceForkIcon, StarIcon, UsersIcon } from './core/CustomSvgs'
 
-const useStyles = createUseStyles({
+const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
         flexDirection: 'column',
@@ -10,9 +10,16 @@ const useStyles = createUseStyles({
         marginBottom: 20,
         padding: 20,
         width: '100%',
+        // minWidth: 330,
+        // maxWidth: 340,
         height: 220,
         borderRadius: 4,
         backgroundColor: 'rgba(0, 0, 0, 0.35)',
+        [theme.breakpoints.down('md')]: {
+            maxWidth: 340,
+            // gridTemplateColumns: 'repeat(2, 50%)',
+            // borderColor: 'red',
+        },
     },
     footer: {
         textAlign: 'right',
@@ -49,7 +56,7 @@ const useStyles = createUseStyles({
             marginLeft: 0,
         },
     },
-})
+}))
 
 
 const Stat = ({icon, label}) => {
