@@ -1,5 +1,5 @@
 
-import Head from 'next/head'
+import { useState } from 'react'
 import Header from '../core/Header'
 import Footer from '../core/Footer'
 import { createUseStyles } from 'react-jss'
@@ -14,12 +14,20 @@ const useStyles = createUseStyles({
 
 const DefaultLayout = ({ children }) => {
     const classes = useStyles()
+    const [mainNavExpanded, setMainNavExpanded] = useState(false)
+
+    const handleNavToggle = () => {
+        setMainNavExpanded((prevState) => ! prevState)
+    }
 
     return (
         <>
-            <Header/>
+            <Header
+                navOpen={mainNavExpanded}
+                navToggleHandler={handleNavToggle}
+            />
             <main className={classes.main}>{children}</main>
-            <Footer/>
+            <Footer />
         </>
     )
 }

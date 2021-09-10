@@ -10,7 +10,11 @@ import CommunityProjectGrid from '../components/CommunityProjectGrid'
 import TestGrid24 from '../components/debug/TestGrid24'
 import projects from '../public/data/projects.json'
 import testimonials from '../public/data/testimonials.json'
-import {LinkedInIcon, MailIcon, PhoneIcon} from '../components/core/CustomSvgs'
+import { LinkedInIcon, MailIcon, PhoneIcon } from '../components/core/CustomSvgs'
+import useDarkMode from '../utils/hooks/useDarkMode'
+import { logHireMeAscii } from '../utils/Utils'
+import Slider from '../components/Slider'
+import SliderCard from '../components/SliderCard'
 
 
 export async function getStaticProps() {
@@ -24,28 +28,11 @@ export async function getStaticProps() {
 
 export default function Home({projects}) {
     const theme = useTheme()
+    const darkMode = useDarkMode()
 
     useEffect(() => {
-        console.log('%c \n' +
-            ' /$$   /$$           /$$ /$$                 /$$      /$$                     /$$       /$$\n' +
-            '| $$  | $$          | $$| $$                | $$  /$ | $$                    | $$      | $$\n' +
-            '| $$  | $$  /$$$$$$ | $$| $$  /$$$$$$       | $$ /$$$| $$  /$$$$$$   /$$$$$$ | $$  /$$$$$$$\n' +
-            '| $$$$$$$$ /$$__  $$| $$| $$ /$$__  $$      | $$/$$ $$ $$ /$$__  $$ /$$__  $$| $$ /$$__  $$\n' +
-            '| $$__  $$| $$$$$$$$| $$| $$| $$  \\ $$      | $$$$_  $$$$| $$  \\ $$| $$  \\__/| $$| $$  | $$\n' +
-            '| $$  | $$| $$_____/| $$| $$| $$  | $$      | $$$/ \\  $$$| $$  | $$| $$      | $$| $$  | $$\n' +
-            '| $$  | $$|  $$$$$$$| $$| $$|  $$$$$$/      | $$/   \\  $$|  $$$$$$/| $$      | $$|  $$$$$$$\n' +
-            '|__/  |__/ \\_______/|__/|__/ \\______/       |__/     \\__/ \\______/ |__/      |__/ \\_______/\n' +
-            '                                                                                           \n', 'color: #140033')
-        console.log('%c Software development as we know it is changing rapidly! More than ever, you need someone on your team who can adapt, learn quickly and continue to bring fresh ideas to the table.', 'color: #140033')
-        console.log('%c Time is money; You\'ve made it this far, let\'s setup an interview.', 'background-color: #b65296; color: #ffffff; font-weight: bold')
-        console.log('\t%c Othneil Drew - Full Stack Developer (Houston, TX | Remote)', 'font-weight: bold')
-        console.log(
-            '\t  -> Resume: https://othneildrew.com/resume\n' +
-            '\t  -> LinkedIn: https://linked.com/in/othneildrew\n' +
-            '\t  -> Email: othneild@gmail.com\n'
-        )
+        logHireMeAscii(darkMode)
     }, [])
-
 
     return (
         <>
@@ -67,6 +54,17 @@ export default function Home({projects}) {
 
 
             {/*{JSON.stringify(projects)}*/}
+
+            <ContentSection
+                topPadding={700}
+                bottomPadding={0}
+                titleText='Latest Work'
+            >
+
+
+
+                <TestGrid24 />
+            </ContentSection>
 
 
             <section style={{marginTop: 644,border: '1px solid transparent'}}>
@@ -98,20 +96,22 @@ export default function Home({projects}) {
 
 
 
-
+            <ContentSection
+                topPadding={600}
+                bottomPadding={300}
+                titleText='Skills'
+                titleAlign='left'
+            >
+                the skills section
+            </ContentSection>
 
             <ContentSection
                 topPadding={600}
                 bottomPadding={300}
                 titleText='Community Projects'
             >
-                {/*<h2 className='h2 textalign--center pb-8'>Community Projects</h2>*/}
-
                 <CommunityProjectGrid projects={projects.openSource} />
-
-
-
-                <TestGrid24 />
+                {/*<TestGrid24 />*/}
             </ContentSection>
 
 
@@ -120,7 +120,17 @@ export default function Home({projects}) {
                 bottomPadding={600}
                 titleText='Testimonials'
             >
+                <Slider>
+                    {testimonials.data.map((t) => (
+                        <SliderCard
+                            quote={t.quote}
+                            author={t.author}
+                        />
+                    ))}
+                </Slider>
 
+
+                <TestGrid24 />
             </ContentSection>
 
 
@@ -153,7 +163,7 @@ export default function Home({projects}) {
                     </div>
                 </div>
 
-                <TestGrid24 />
+                {/*<TestGrid24 />*/}
 
                 <div
                     style={{
@@ -185,7 +195,7 @@ export default function Home({projects}) {
 
 
 
-            <TestGrid24 />
+            {/*<TestGrid24 />*/}
 
             {/*<TestGrid24 />*/}
 

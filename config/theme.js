@@ -8,9 +8,9 @@ const breakpointValues = {
     xl: 1920,
 }
 
-const throwErrIfNotValidBreakPoint = (bp) => {
-    if (! breakpointKeys.includes(bp)) {
-        throw new Error(`${bp} is not a valid breakpoint. Valid breakpoints: ${breakpointKeys.join(' | ')}`)
+const throwErrIfNotValidBreakPoint = (breakpoint) => {
+    if (! breakpointKeys.includes(breakpoint)) {
+        throw new Error(`${breakpoint} is not a valid breakpoint. Valid breakpoints: ${breakpointKeys.join(' | ')}`)
     }
 }
 
@@ -29,26 +29,26 @@ export default {
     breakpoints: {
         keys: breakpointKeys,
         values: breakpointValues,
-        up: (bp) => {
-            throwErrIfNotValidBreakPoint(bp)
-            return `@media (min-width: ${breakpointValues[bp]}px)`
+        up: (breakpoint) => {
+            throwErrIfNotValidBreakPoint(breakpoint)
+            return `@media (min-width: ${breakpointValues[breakpoint]}px)`
         },
-        down: (bp) => {
-            throwErrIfNotValidBreakPoint(bp)
-            return `@media (max-width: ${breakpointValues[bp]}px)`
+        down: (breakpoint) => {
+            throwErrIfNotValidBreakPoint(breakpoint)
+            return `@media (max-width: ${breakpointValues[breakpoint]}px)`
         },
-        between: (bp1, bp2) => {
-            throwErrIfNotValidBreakPoint(bp1)
-            throwErrIfNotValidBreakPoint(bp2)
-            return `@media (min-width: ${breakpointValues[bp1]}px and max-width ${breakpointValues[bp2]}px)`
+        between: (breakpoint1, breakpoint2) => {
+            throwErrIfNotValidBreakPoint(breakpoint1)
+            throwErrIfNotValidBreakPoint(breakpoint2)
+            return `@media (min-width: ${breakpointValues[breakpoint1]}px and max-width ${breakpointValues[breakpoint2]}px)`
         },
-        only: (bp) => {
-            throwErrIfNotValidBreakPoint(bp)
-            return `@media (width: ${breakpointValues[bp]}px)`
+        only: (breakpoint) => {
+            throwErrIfNotValidBreakPoint(breakpoint)
+            return `@media (width: ${breakpointValues[breakpoint]}px)`
         },
-        width: (bp) => {
-            throwErrIfNotValidBreakPoint(bp)
-            return breakpointValues[bp]
+        width: (breakpoint) => {
+            throwErrIfNotValidBreakPoint(breakpoint)
+            return breakpointValues[breakpoint]
         },
         get: () => breakpointValues
     },

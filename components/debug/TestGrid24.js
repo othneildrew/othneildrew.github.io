@@ -8,7 +8,7 @@ const TestGrid24 = () => (
             left: 0,
             width: '100%',
             // backgroundColor: 'green',
-            opacity: 0.1,
+            opacity: 0.2,
         }}
     >
         <div className='og-col-1' />

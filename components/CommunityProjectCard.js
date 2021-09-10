@@ -1,6 +1,6 @@
 
 import { createUseStyles } from 'react-jss'
-
+import {ExternalLinkIcon, GithubIcon, LinkedInIcon, SourceForkIcon, StarIcon, UsersIcon} from './core/CustomSvgs'
 
 const useStyles = createUseStyles({
     root: {
@@ -28,30 +28,72 @@ const useStyles = createUseStyles({
         opacity: 0.4,
     },
     statsContainer: {
+        display: 'flex',
+        alignItems: 'center',
+    },
+    stat: {
+        display: 'flex',
+        alignItems: 'center',
+        marginRight: 20,
+        '&:last-child': {
+            marginRight: 0,
+        },
+    },
+    link: {
+        display: 'inline-flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginLeft: 15,
+
+        '&:first-child': {
+            marginLeft: 0,
+        },
     },
 })
+
+
+const Stat = ({icon, label}) => {
+    const classes = useStyles()
+
+    return (
+        <div className={classes.stat}>
+            {icon} <span style={{paddingLeft: 5}}>{label}</span>
+        </div>
+    )
+}
 
 const CommunityProjectCard = ({data}) => {
     const classes = useStyles()
 
     const {name,description,forks,stars,contributors,links} = data
 
-
-    // console.log(props)
-
     return (
         <div className={classes.root}>
-            <div className={classes.body}>
+            <div>
                 <p className={classes.title}>{name}</p>
                 <span className={classes.description}>{description}</span>
 
                 <div className={classes.statsContainer}>
+                    <Stat
+                        icon={<SourceForkIcon size={15} />}
+                        label={forks}
+                    />
 
+                    <Stat
+                        icon={<StarIcon size={15} />}
+                        label={stars}
+                    />
+
+                    <Stat
+                        icon={<UsersIcon size={15} />}
+                        label={contributors}
+                    />
                 </div>
             </div>
 
             <div className={classes.footer}>
-                test
+                <a href={links.github} className={classes.link}><GithubIcon color='#6FCEDC' /></a>
+                <a href={links.demo} className={classes.link}><ExternalLinkIcon color='#6FCEDC' /></a>
             </div>
         </div>
     )

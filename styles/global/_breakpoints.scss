@@ -1,13 +1,21 @@
 
 /** Breakpoints */
 
-$mobile-max-width:          767px;
-$mobile-large-min-width:    576px;  // xs    =>  lm
-$tablet-min-width:          768px;  // sm    =>  tbl
-$small-laptop-min-width:    1025px; // md   => smlpt
-$laptop-min-width:          1200px; // lg   => lpt
-$small-desktop-min-width:   1441px; // xl   => smdsk
-$desktop-min-width:         1650px; // xxl  => lgdsk
+//$mobile-max-width:          767px;
+//$mobile-large-min-width:    576px;  // xs    =>  lm
+//$tablet-min-width:          768px;  // sm    =>  tbl
+//$small-laptop-min-width:    1025px; // md   => smlpt
+//$laptop-min-width:          1200px; // lg   => lpt
+//$small-desktop-min-width:   1441px; // xl   => smdsk
+//$desktop-min-width:         1650px; // xxl  => lgdsk
+
+$mobile-max-width:          599px;
+$mobile-large-min-width:    0;  // xs    =>  lm
+$tablet-min-width:          600px;  // sm    =>  tbl
+$small-laptop-min-width:    960px; // md   => smlpt
+$laptop-min-width:          1280px; // lg   => lpt
+$small-desktop-min-width:   1920px; // xl   => smdsk
+$desktop-min-width:         1441px; // xxl  => lgdsk
 
 
 $page-breakpoints       : (

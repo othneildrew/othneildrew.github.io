@@ -1,13 +1,13 @@
 
 import Link from 'next/link'
-import { createUseStyles } from 'react-jss'
+import { createUseStyles, useTheme } from 'react-jss'
 import { CodeIcon } from './CustomSvgs'
 import MenuIcon from './MenuIcon'
-
+import useMediaQuery from '../../utils/hooks/useMediaQuery'
 
 const useStyles = createUseStyles((theme) => ({
     root: {
-        zIndex: 20000,
+        zIndex: 2000,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -39,39 +39,55 @@ const useStyles = createUseStyles((theme) => ({
         // backgroundColor: 'green',
 
     },
-    nav: {
-        display: 'none',
+    logoLink: {
+        transition: '0.2s all',
+        '&:hover': {
+            opacity: 0.7,
+        },
     },
-    menu: {
+    nav: {
+        position: 'absolute',
+        left: '50%',
+        transform: 'translateX(-50%)',
 
+        // display: 'none',
+    },
+    navLink: {
+        padding: '0 8px',
+        color: 'rgba(255, 255, 255, 0.7)',
+        textDecoration: 'none',
     },
 }))
 
-const Header = () => {
+
+const Header = ({navOpen, navToggleHandler}) => {
     const classes = useStyles()
+    const theme = useTheme()
+    const mqSmBreakpoint = useMediaQuery(theme.breakpoints.down('md'))
 
     return (
         <header className={classes.root}>
             <div className={classes.innerWrapper}>
                 <Link href='/'>
-                    <a>
+                    <a className={classes.logoLink}>
                         <CodeIcon size={60} />
                     </a>
                 </Link>
 
+                {!mqSmBreakpoint &&
                 <nav className={classes.nav}>
-                    <a>Latest Work</a>
-                    <a>Skills</a>
-                    <a>Testimonials</a>
-                    <a>Projects</a>
-                </nav>
+                    <a href='#' className={classes.navLink}>Latest Work</a>
+                    <a href='#' className={classes.navLink}>Skills</a>
+                    <a href='#' className={classes.navLink}>Testimonials</a>
+                    <a href='#' className={classes.navLink}>Projects</a>
+                </nav>}
 
                 <div style={{display:'flex',alignItems:'center'}}>
                     <Link href='/resume'>
                         <a className='btn btn--outlined btn--primary'>Resume</a>
                     </Link>
 
-                    <MenuIcon open={false} />
+                    {mqSmBreakpoint && <MenuIcon open={navOpen} navToggleHandler={navToggleHandler} />}
                 </div>
             </div>
         </header>

@@ -1,25 +1,22 @@
 
+import { useState } from 'react'
 import { createUseStyles } from 'react-jss'
-
 
 const useStyles = createUseStyles({
     root: {
 
-    }
+    },
 })
 
-const Card = ({}) => {
-    const classes = useStyles()
+
+const SliderIndicator = () => {
+    const [pos, setPos] = useState(0)
 
     return (
-        <div>
-            <p></p>
-        </div>
-    )
-}
+        // <div className={classes.root}>
+        //
+        // </div>
 
-const TestimonialsSlider = () => {
-    return (
         <div className='og-container'>
             <div className='og-row'>
                 <div className='og-col-24'>
@@ -30,4 +27,4 @@ const TestimonialsSlider = () => {
     )
 }
 
-export default TestimonialsSlider
+export default SliderIndicator

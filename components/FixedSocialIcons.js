@@ -4,16 +4,29 @@ import { createUseStyles } from 'react-jss'
 import { LinkedInIcon, GithubIcon, MailIcon } from './core/CustomSvgs'
 
 
-const useStyles = createUseStyles({
+const useStyles = createUseStyles((theme) => ({
     root: {
         zIndex: 2000,
         position: 'fixed',
-        left: 60,
+        // left: 60,
+        left: 30,
         bottom: 0,
         width: 'auto',
         height: 'auto',
         // border: '1px solid orange',
         textAlign: 'center',
+
+        // [theme.breakpoints.up('md')]: {
+            // left: 30,
+            // padding: 30,
+            // backgroundColor: 'red',
+        // },
+
+        [theme.breakpoints.up('lg')]: {
+            left: 60,
+            // padding: '30px 60px',
+            // backgroundColor: 'red',
+        },
 
 
 
@@ -37,10 +50,14 @@ const useStyles = createUseStyles({
         marginLeft: '50%',
         transform: 'translateX(-50%)',
         width: 2,
-        height: 103,
+        height: 50,
         backgroundColor: '#c4c4c4',
+
+        [theme.breakpoints.up('lg')]: {
+            height: 103,
+        }
     },
-})
+}))
 
 const FixedSocialIcons = () => {
     const classes = useStyles()
@@ -53,7 +70,7 @@ const FixedSocialIcons = () => {
                 </Link>
 
                 <Link href='https://github.com/othneildrew' passRef target='_blank'>
-                    <a title='Visit Github Profile'><GithubIcon /></a>
+                    <a title='Visit Github Profile'><GithubIcon color='#c4c4c4' /></a>
                 </Link>
 
                 <Link href='/contact' passRef target='_blank'>
