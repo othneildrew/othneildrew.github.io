@@ -7,7 +7,6 @@ import { makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles({
     main: {
-        // border: '1px solid red',
         minHeight: '100vh',
     },
 })
@@ -21,14 +20,14 @@ const DefaultLayout = ({ children }) => {
     }
 
     return (
-        <>
+        <div style={{overflowX: 'clip'}}>
             <Header
                 navOpen={mainNavExpanded}
                 navToggleHandler={handleNavToggle}
             />
             <main className={classes.main}>{children}</main>
             <Footer />
-        </>
+        </div>
     )
 }
 

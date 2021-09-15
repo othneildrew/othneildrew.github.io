@@ -1,7 +1,7 @@
 
 import projects from '../public/data/projects.json'
 import testimonials from '../public/data/testimonials.json'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import Hero from '../components/Hero'
@@ -13,8 +13,21 @@ import useDarkMode from '../utils/hooks/useDarkMode'
 import { logHireMeAscii } from '../utils/Utils'
 import Slider from '../components/Slider'
 import SliderCard from '../components/SliderCard'
-import { useTheme } from '@material-ui/core'
+import {
+    useTheme,
+    Container,
+    Grid,
+    Typography,
+    Button,
+    // makeStyles
+} from '@material-ui/core'
+import SkillScroller from '../components/SkillScroller';
+import WorkCard from '../components/WorkCard';
 
+
+// const useStyles = makeStyles((theme) => ({
+//
+// }))
 
 export async function getStaticProps() {
     return {
@@ -26,11 +39,16 @@ export async function getStaticProps() {
 }
 
 export default function Home({projects}) {
+    // const classes = useStyles()
     const theme = useTheme()
     const darkMode = useDarkMode()
+    const [hireMeLogged, setHireMeLogged] = useState(false)
 
     useEffect(() => {
-        logHireMeAscii(darkMode)
+        if (!hireMeLogged) {
+            logHireMeAscii(darkMode)
+            setHireMeLogged(true)
+        }
     }, [])
 
     return (
@@ -51,56 +69,34 @@ export default function Home({projects}) {
 
 
 
-
+            {/*Latest Work Section*/}
             <ContentSection
                 topPadding={700}
                 bottomPadding={0}
                 titleText='Latest Work'
+                titleTheme='dark'
             >
-
-
-
+                <Container fixed maxWidth='md'>
+                    {projects.showcase.map((project, i) => {
+                        let reverseOrder = Boolean(i % 2 !== 0) // odd numbers return true
+                        return <WorkCard key={i} project={project} reverse={reverseOrder} />
+                    })}
+                </Container>
             </ContentSection>
 
 
-            <section style={{marginTop: 644,border: '1px solid transparent'}}>
-                <h2>Latest Work</h2>
-
-                <div className='og-container'>
-                    <div className='og-row'>
-                        <div className='og-col-12'>
-                            <div className='project__img-container'>
-                                <img src='https://via.placeholder.com' alt='' />
-                            </div>
-
-                            <div>
-                                <span className='tag'>Laravel</span>
-                            </div>
-                        </div>
-                        <div className='og-col-12'>
-                            <p>Alpha Space Launch</p>
-                            <p>An unreleased website where customers can send class rings and other paraphernalia to space and receive a certificate of flight, photos, plaque and other items. (Canceled by client for lack of market).</p>
-                            <div className='project__btn-container'>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-
-
-
+            {/*Skills Section*/}
             <ContentSection
                 topPadding={600}
                 bottomPadding={300}
                 titleText='Skills'
                 titleAlign='left'
             >
-                the skills section
+                {/*<SkillScroller />*/}
             </ContentSection>
 
+
+            {/*Community Projects Section*/}
             <ContentSection
                 topPadding={600}
                 bottomPadding={300}
@@ -110,53 +106,75 @@ export default function Home({projects}) {
             </ContentSection>
 
 
+            {/*Testimonials Section*/}
             <ContentSection
                 topPadding={69}
-                bottomPadding={600}
+                bottomPadding={90}
                 titleText='Testimonials'
             >
-                {/*<Slider>*/}
-                {/*    {testimonials.data.map((t, i) => (*/}
-                {/*        <SliderCard*/}
-                {/*            key={i}*/}
-                {/*            quote={t.quote}*/}
-                {/*            author={t.author}*/}
-                {/*        />*/}
-                {/*    ))}*/}
-                {/*</Slider>*/}
-
-
+                <Slider>
+                    {testimonials.data.map((t, i) => {
+                        if (i >= 1) return
+                        return (
+                            <SliderCard
+                                key={i}
+                                quote={t.quote}
+                                author={t.author}
+                            />
+                        )
+                    })}
+                </Slider>
             </ContentSection>
 
 
+            {/*Contact / Hire Me Section*/}
             <ContentSection
                 topPadding={700}
-                bottomPadding={150}
+                bottomPadding={480}
                 titleText='Interested in working together?'
                 overrideTitlePadding={theme.spacing(0, 0, 2, 0)}
             >
-                <p style={{textAlign:'center',fontSize:'1.125em',opacity:0.7}}>Let's talk about your next project or role!</p>
+                <Typography style={{marginBottom:80,textAlign:'center',fontSize:'1.125em',opacity:0.7}}>Let's talk about your next project or role!</Typography>
 
-                <div className='og-container mt-18'>
-                    <div className='og-row'>
-                        <div className='offset-md-3 og-col-md-9' style={{border: '1px solid pink'}}>
+                <Container fixed maxWidth='md'>
+                    <Grid container justifyContent='center'>
+                        <Grid item xs={9} sm={10} md={5} className='' style={{border: '1px solid pink'}}>
                             <p>rocket goes here</p>
-                        </div>
-                        <div className='og-col-md-7 offset-md-1' style={{border: '1px solid red'}}>
-                            <Link href='/'>
-                                <a className='my-7 btn btn--outlined btn--light btn--block btn--icon'><LinkedInIcon /> Connect on LinkedIn</a>
-                            </Link>
+                        </Grid>
+                        <Grid item xs={9} sm={10} md={5}>
+                            <Grid container spacing={4} direction='column' alignItems='center' style={{border: '1px solid pink'}}>
+                                <Grid item xs={8} style={{border: '1px solid orange'}}>
+                                    <Button
+                                        color='default'
+                                        startIcon={<LinkedInIcon size={24} />}
+                                        fullWidth
+                                    >
+                                        Connect on LinkedIn
+                                    </Button>
+                                </Grid>
 
-                            <Link href='/'>
-                                <a className='my-7 btn btn--outlined btn--light btn--block btn--icon'><PhoneIcon /> Connect via phone</a>
-                            </Link>
+                                <Grid item xs={12} style={{border: '1px solid orange'}}>
+                                    <Button
+                                        color='default'
+                                        startIcon={<PhoneIcon size={24} />}
+                                        fullWidth
+                                    >
+                                        Connect via Phone
+                                    </Button>
+                                </Grid>
 
-                            <Link href='/'>
-                                <a className='my-7 btn btn--outlined btn--light btn--block btn--icon'><MailIcon /> Send an Email</a>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
+                                <Grid item xs={8} style={{border: '1px solid orange'}}>
+                                    <Button
+                                        color='default'
+                                        startIcon={<MailIcon size={24} />}
+                                    >
+                                        Send an Email
+                                    </Button>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Container>
 
                 {/*<TestGrid24 />*/}
 
@@ -172,16 +190,6 @@ export default function Home({projects}) {
                     }}
                 />
             </ContentSection>
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -14,4 +14,4 @@
   - accessibility
   - page SEO and other html meta tags
   - autoprefixer 
-    
+    - fix sizing w/ SvgIcon

@@ -1,5 +1,5 @@
 
-// import '../styles/global.scss'
+import '../styles/global.scss'
 import theme from '../config/theme'
 import { ThemeProvider, CssBaseline } from '@material-ui/core'
 import DefaultLayout from '../components/layouts/DefaultLayout'

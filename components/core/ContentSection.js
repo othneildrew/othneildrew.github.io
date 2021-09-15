@@ -1,5 +1,11 @@
 
-import { makeStyles, useTheme } from '@material-ui/core'
+import {
+    makeStyles,
+    useTheme,
+    Container,
+    Grid,
+    Typography,
+} from '@material-ui/core'
 
 
 const useStyles = makeStyles({
@@ -7,7 +13,7 @@ const useStyles = makeStyles({
         position: 'relative',
         width: '100%',
         maxWidth: '100%',
-        border: '2px dashed green',
+        // border: '2px dashed green',
 
     },
     sectionHead: {
@@ -27,13 +33,13 @@ const ContentSection = ({topPadding = 0,bottomPadding = 0,titleText,titleAlign =
 
     return (
         <section className={classes.root} style={{paddingTop: topPadding, paddingBottom: bottomPadding}}>
-            <div className='og-container'>
-                <div className='og-row'>
-                    <div className='og-col-24'>
-                        <h2 className="h2" style={{padding: overrideTitlePadding, color: titleColor, fontWeight: 400, textAlign: titleAlign}}>{titleText}</h2>
-                    </div>
-                </div>
-            </div>
+            <Container fixed maxWidth='lg' style={{border: '1px solid transparent'}}>
+                <Grid container style={{border: '1px solid transparent'}}>
+                    <Grid item xs={12} style={{border: '1px solid transparent'}}>
+                        <Typography variant='h3' style={{padding:overrideTitlePadding,color:titleColor,textAlign:titleAlign}}>{titleText}</Typography>
+                    </Grid>
+                </Grid>
+            </Container>
 
             {children}
         </section>

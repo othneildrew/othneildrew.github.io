@@ -1,5 +1,5 @@
 
-import { makeStyles } from '@material-ui/core'
+import { makeStyles, useTheme, Typography } from '@material-ui/core'
 import { ExternalLinkIcon, GithubIcon, LinkedInIcon, SourceForkIcon, StarIcon, UsersIcon } from './core/CustomSvgs'
 
 const useStyles = makeStyles((theme) => ({
@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: 4,
         backgroundColor: 'rgba(0, 0, 0, 0.35)',
         [theme.breakpoints.down('md')]: {
-            maxWidth: 340,
+            // maxWidth: 340,
             // gridTemplateColumns: 'repeat(2, 50%)',
             // borderColor: 'red',
         },
@@ -25,8 +25,9 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'right',
     },
     title: {
+        fontFamily: '"IBM Plex Sans Condensed", sans-serif',
         fontSize: '1.5em',
-        color: '#B65296',
+        color: theme.palette.primary.main,
     },
     description: {
         display: 'block',
@@ -42,6 +43,9 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         alignItems: 'center',
         marginRight: 20,
+        userSelect: 'none',
+        pointerEvents: 'none',
+        color: 'rgba(255, 255, 255, 0.6)',
         '&:last-child': {
             marginRight: 0,
         },
@@ -51,6 +55,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         marginLeft: 15,
+        opacity: 0.75,
 
         '&:first-child': {
             marginLeft: 0,
@@ -71,6 +76,7 @@ const Stat = ({icon, label}) => {
 
 const CommunityProjectCard = ({data}) => {
     const classes = useStyles()
+    const theme = useTheme()
 
     const {name,description,forks,stars,contributors,links} = data
 
@@ -82,25 +88,25 @@ const CommunityProjectCard = ({data}) => {
 
                 <div className={classes.statsContainer}>
                     <Stat
-                        icon={<SourceForkIcon size={15} />}
+                        icon={<SourceForkIcon size={15} color='rgba(255, 255, 255, 0.6)' />}
                         label={forks}
                     />
 
                     <Stat
-                        icon={<StarIcon size={15} />}
+                        icon={<StarIcon size={15} color='rgba(255, 255, 255, 0.6)' />}
                         label={stars}
                     />
 
                     <Stat
-                        icon={<UsersIcon size={15} />}
+                        icon={<UsersIcon size={15} color='rgba(255, 255, 255, 0.6)' />}
                         label={contributors}
                     />
                 </div>
             </div>
 
             <div className={classes.footer}>
-                <a href={links.github} className={classes.link}><GithubIcon color='#6FCEDC' /></a>
-                <a href={links.demo} className={classes.link}><ExternalLinkIcon color='#6FCEDC' /></a>
+                <a href={links.github} className={classes.link}><GithubIcon color={theme.palette.common.white} /></a>
+                <a href={links.demo} className={classes.link}><ExternalLinkIcon color={theme.palette.common.white} /></a>
             </div>
         </div>
     )

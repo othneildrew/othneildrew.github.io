@@ -1,17 +1,33 @@
 
 import Link from 'next/link'
-import { makeStyles, useTheme } from '@material-ui/core'
-import { FloatingMoon } from './core/CustomSvgs';
+import {
+    makeStyles,
+    useTheme,
+    Container,
+    Grid,
+    Typography,
+    Button
+} from '@material-ui/core'
 
 
 const useStyles = makeStyles((theme) => ({
     root: {
+        display: 'display',
+        alignItems: 'stretch',
         position: 'relative',
         // flex: 1,
         // backgroundColor: 'brown',
-        border: '1px solid yellow',
-        width: '100%',
-        height: '100vh',
+        // border: '4px solid pink',
+        // width: 'auto',
+        height: 'auto',
+        // height: '100vh',
+
+        // backgroundColor: 'red',
+
+        // overflow: 'hidden visible',
+
+        // overflowX: 'clip',
+
 
     },
     innerWrapper: {
@@ -19,14 +35,29 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flex: 1,
         flexDirection: 'column',
-        justifyContent: 'center',
+        // paddingTop: 200,
+        padding: '200px 25px 0',
+        // justifyContent: 'center',
         // alignItems: 'center',
         // transform: 'translateY(-calc(100vh - 75%))',
-        transform: 'translateY(-40px)',
+        // transform: 'translateY(-40px)',
+
         width: '100%',
-        height: 'inherit',
+        height: '100vh',
+        // border: '1px dashed green',
+
         // backgroundColor: 'black',
 
+
+
+
+
+        [theme.breakpoints.up('md')]: {
+            padding: '200px 30px 0'
+        },
+        [theme.breakpoints.up('lg')]: {
+            padding: '200px 60px 0',
+        },
     },
     headline: {
         fontSize: '1.125em',
@@ -48,7 +79,7 @@ const useStyles = makeStyles((theme) => ({
     subtitle: {
         fontFamily: 'Black Han Sans; sans-serif',
         fontSize: '2em',
-        color: theme.palette.secondary,
+        color: theme.palette.secondary.main,
         // color: '#6fcedc',
 
         [theme.breakpoints.up('sm')]: {
@@ -63,34 +94,36 @@ const useStyles = makeStyles((theme) => ({
         marginTop: 43,
     },
     floatingMoon: {
-        // display: 'none',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
         zIndex: -10,
         position: 'absolute',
-        right: '-80%',
-        // bottom: 0,
-        bottom: '-50%',
-        border: '1px solid green',
+        top: 500,
+        left: 0,
         width: 'auto',
         height: 700,
 
+        '& img': {
+            flexShrink: 'none',
+            width: 'auto',
+            height: '100%',
+        },
+
         [theme.breakpoints.up('sm')]: {
-            right: '-45%',
-            bottom: '-40%',
-            // fontSize: '3em',
+            top: 420,
+            right: -500,
+            height: 900,
         },
 
         [theme.breakpoints.up('md')]: {
-            right: '-30%',
-            bottom: '-40%',
-            // fontSize: '3em',
+            height: 1136,
+            top: 340,
+            right: -650,
         },
 
         [theme.breakpoints.up('lg')]: {
-            right: 0,
-            bottom: -700,
-            width: 700,
-            height: 'auto',
-            // fontSize: '3em',
+            top: 300,
         },
     },
 }))
@@ -104,31 +137,69 @@ const Hero = () => {
 
     return (
         <section className={classes.root}>
-            <div className={classes.innerWrapper}>
-                <div className='og-container'>
-                    <div className='og-row'>
-                        <div className='offset-1 og-col-22 offset-sm-0 og-col-sm-24 offset-md-2 og-col-md-20 offset-lg-0' style={{border: '1px solid red'}}>
+            {/*<div className={classes.innerWrapper}>*/}
+            {/*    <div className='og-container'>*/}
+            {/*        <div className='og-row'>*/}
+            {/*            <div className='offset-1 og-col-22 offset-sm-0 og-col-sm-24 offset-md-2 og-col-md-20 offset-lg-0' style={{border: '1px solid red'}}>*/}
+            {/*                <p className={classes.headline}>Full Stack Developer &nbsp; | &nbsp; UI/UX Pro</p>*/}
+            {/*                <h1 className={classes.title}>Othneil Drew</h1>*/}
+            {/*                <p className={classes.subtitle}>I create amazing<br /> experiences for the web.</p>*/}
+
+            {/*                <div className={classes.btnContainer}>*/}
+            {/*                    <Link href='#'>*/}
+            {/*                        <button role='link' className='btn btn--filled btn--primary btn--md' style={{marginRight: theme.spacing(4)}}>Hire Me</button>*/}
+            {/*                    </Link>*/}
+
+            {/*                    <Link href='/resume'>*/}
+            {/*                        <button role='link' className='btn btn--outlined btn--primary'>Resume</button>*/}
+            {/*                    </Link>*/}
+            {/*                </div>*/}
+            {/*            </div>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
+
+                <Container fixed maxWidth='lg' disableGutters className={classes.innerWrapper}>
+                    <Grid container>
+                        <Grid item xs={12}>
                             <p className={classes.headline}>Full Stack Developer &nbsp; | &nbsp; UI/UX Pro</p>
                             <h1 className={classes.title}>Othneil Drew</h1>
                             <p className={classes.subtitle}>I create amazing<br /> experiences for the web.</p>
 
                             <div className={classes.btnContainer}>
-                                <Link href='#'>
-                                    <button role='link' className='btn btn--filled btn--primary btn--md' style={{marginRight: theme.spacing(4)}}>Hire Me</button>
-                                </Link>
+                                {/*<Link href='#'>*/}
+                                {/*    <button role='link' className='btn btn--filled btn--primary btn--md' style={{marginRight: theme.spacing(4)}}>Hire Me</button>*/}
+                                {/*</Link>*/}
 
-                                <Link href='/resume'>
-                                    <button role='link' className='btn btn--outlined btn--primary'>Resume</button>
-                                </Link>
+                                {/*<Link href='/resume'>*/}
+                                {/*    <button role='link' className='btn btn--outlined btn--primary'>Resume</button>*/}
+                                {/*</Link>*/}
+
+                                <Button variant='contained' size='large' style={{marginRight:theme.spacing(3)}}>
+                                    Hire Me
+                                </Button>
+
+                                <Button style={{color:'rgba(255,255,255,0.7)',fontWeight:'normal'}}>
+                                    Resume
+                                </Button>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                        </Grid>
+                    </Grid>
 
-            {/*<div className={classes.floatingMoon}>*/}
-            {/*    <FloatingMoon style={{height:'100%',width:'auto'}} />*/}
+                    <div className={classes.floatingMoon}>
+                        <img src='/imgs/illustrations/moon.svg' alt='Moon' />
+                        {/*    <FloatingMoon width={2000} height='auto' />*/}
+                    </div>
+                </Container>
             {/*</div>*/}
+
+
+
+
+
+
+
+
         </section>
     )
 }

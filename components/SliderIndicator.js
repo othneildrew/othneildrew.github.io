@@ -1,30 +1,46 @@
 
 import { useState } from 'react'
 import { makeStyles } from '@material-ui/core'
+import clsx from 'clsx'
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
     root: {
+        position: 'relative',
+        margin: theme.spacing(0, 1),
+        width: 10,
+        height: 10,
+        borderRadius: '50%',
+        backgroundColor: theme.palette.common.white,
+    },
+    active: {
+        backgroundColor: theme.palette.primary.main,
+
+        '&:after': {
+            content: '""',
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            width: 25,
+            height: 25,
+            borderRadius: '50%',
+            border: `2px dashed ${theme.palette.primary.main}`,
+        }
 
     },
-})
+}))
 
 
-const SliderIndicator = () => {
-    const [pos, setPos] = useState(0)
+const SliderIndicator = ({key,cardSelectHandler,active}) => {
+    const classes = useStyles()
 
     return (
-        // <div className={classes.root}>
-        //
-        // </div>
-
-        <div className='og-container'>
-            <div className='og-row'>
-                <div className='og-col-24'>
-
-                </div>
-            </div>
-        </div>
+        <div
+            className={clsx(classes.root, {[classes.active]:active})}
+            onClick={() => cardSelectHandler(key)}
+        />
     )
+
 }
 
 export default SliderIndicator

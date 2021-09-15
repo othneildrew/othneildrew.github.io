@@ -5,7 +5,6 @@ import CustomLink from './CustomLink'
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        position: 'relative',
         padding: '40px 70px',
         // border: '1px solid green',
         // backgroundColor: '#060A18',
@@ -14,26 +13,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.up('md')]: {
             padding: '40px 0',
         }
-    },
-    mountainLaunchpad: {
-        zIndex: -10,
-        position: 'absolute',
-        left: '50%',
-        bottom: 0,
-        transform: 'translateX(-47.5%)',
-        width: 'auto',
-        height: 500,
-
-        [theme.breakpoints.up('sm')]: {
-            height: 400,
-            transform: 'translateX(-46.5%)',
-        },
-
-        [theme.breakpoints.up('md')]: {
-            transform: 'translateX(-50%)',
-            height: 530,
-        },
-    },
+    }
 }))
 
 
@@ -59,8 +39,6 @@ const Footer = () => {
                     <span style={{fontSize:'0.875em'}}>Previous site versions</span>
                 </CustomLink>
             </Typography>
-
-            <img className={classes.mountainLaunchpad} src='/imgs/illustrations/mountain_w_launchpad.svg' alt='Mountain with rocket launchpad' />
         </footer>
     )
 }

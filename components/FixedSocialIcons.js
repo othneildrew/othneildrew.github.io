@@ -50,10 +50,13 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: '50%',
         transform: 'translateX(-50%)',
         width: 2,
-        height: 50,
+        height: 103,
         backgroundColor: '#c4c4c4',
 
-        [theme.breakpoints.up('lg')]: {
+        [theme.breakpoints.up('sm')]: {
+            height: 65,
+        },
+        [theme.breakpoints.up('xl')]: {
             height: 103,
         }
     },
