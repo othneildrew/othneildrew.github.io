@@ -3,10 +3,17 @@ import { makeStyles, Container, Grid, Typography } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        display: 'inline-block',
+        // display: 'inline-block',
         width: 340,
+        height: 'auto',
         minHeight: 260,
         borderRight: `1px solid ${theme.palette.primary.main}`,
+        borderBottom: `1px solid ${theme.palette.primary.main}`,
+
+        '&:first-child': {
+            borderLeft: `1px solid ${theme.palette.primary.main}`,
+        },
+
     },
     header: {
         display: 'flex',
@@ -25,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 
-const SkillScrollerPanel = ({title}) => {
+const SkillScrollerPanel = ({title, children}) => {
     const classes = useStyles()
 
     return (
@@ -33,7 +40,7 @@ const SkillScrollerPanel = ({title}) => {
             <div className={classes.header}>
                 <Typography className={classes.title}>{title}</Typography>
             </div>
-            <div className={classes.body}></div>
+            <div className={classes.body}>{children}</div>
         </div>
     )
 }

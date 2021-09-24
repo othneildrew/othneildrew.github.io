@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: 8,
         backgroundColor: '#ebebeb',
         color: '#6f6f6f',
+        cursor: 'default',
 
         '&:not(:last-child)': {
             marginRight: theme.spacing(2),

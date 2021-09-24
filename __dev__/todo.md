@@ -1,6 +1,4 @@
 # TODOs
-- import and customize theme
-- switch all react-jss styles to use material-ui/core
 - update readme template to the newest one
 - download all assets and designs
 - web page layout
@@ -8,7 +6,6 @@
 - optimize page for SEO
     - aria tags
     - actually test with screen reader
-- console.log funny ascii message to hire me
 - optimizations
   - html5 tag usage
   - accessibility

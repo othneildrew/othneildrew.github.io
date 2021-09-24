@@ -19,15 +19,52 @@ import {
     Grid,
     Typography,
     Button,
-    // makeStyles
+    makeStyles
 } from '@material-ui/core'
 import SkillScroller from '../components/SkillScroller';
 import WorkCard from '../components/WorkCard';
 
 
-// const useStyles = makeStyles((theme) => ({
-//
-// }))
+const useStyles = makeStyles((theme) => ({
+    satelliteOrbit: {
+        zIndex: -5,
+        position: 'absolute',
+        top: -400,
+        right: -360,
+        // border: '2px dashed green',
+        width: 680,
+        height: 'auto',
+
+        [theme.breakpoints.up('sm')]: {
+            // top: -500,
+            right: -460,
+            // border: '2px dashed yellow',
+            // width: 789,
+        },
+
+        [theme.breakpoints.up('md')]: {
+            top: -500,
+            // right: -900,
+            right: -500,
+            // border: '2px dashed red',
+            width: 789,
+        },
+
+        [theme.breakpoints.up('lg')]: {
+            // top: -500,
+            right: -760,
+            // border: '2px dashed blue',
+            width: 889,
+        },
+
+        [theme.breakpoints.up('xl')]: {
+            // top: -500,
+            right: -889,
+            // border: '2px dashed pink',
+            width: 889,
+        },
+    },
+}))
 
 export async function getStaticProps() {
     return {
@@ -38,8 +75,9 @@ export async function getStaticProps() {
     }
 }
 
+
 export default function Home({projects}) {
-    // const classes = useStyles()
+    const classes = useStyles()
     const theme = useTheme()
     const darkMode = useDarkMode()
     const [hireMeLogged, setHireMeLogged] = useState(false)
@@ -55,7 +93,6 @@ export default function Home({projects}) {
         <>
             <Head>
                 {/*Meta*/}
-                <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no' />
                 <title>Othneil Drew - Full Stack Developer (Houston, TX | Remote)</title>
                 
                 {/*SEO*/}
@@ -87,12 +124,40 @@ export default function Home({projects}) {
 
             {/*Skills Section*/}
             <ContentSection
+                maxWidth='md'
                 topPadding={600}
                 bottomPadding={300}
                 titleText='Skills'
                 titleAlign='left'
             >
-                {/*<SkillScroller />*/}
+                <Container fixed maxWidth='md' style={{position: 'relative'}}>
+                    <img className={classes.satelliteOrbit} src='/imgs/illustrations/satellite_in_orbit.svg' alt='Satellite in Orbit' />
+                </Container>
+
+                <SkillScroller />
+
+                <div
+                    style={{
+                        marginTop: theme.spacing(16),
+                        textAlign: 'center',
+                    }}
+                >
+                    <Button
+                        variant='contained'
+                        size='large'
+                        style={{
+                            // display: 'block',
+                            // marginTop: theme.spacing(16),
+                            // marginLeft: 'auto',
+                            marginRight: theme.spacing(3),
+                        }}>
+                        Hire Me
+                    </Button>
+
+                    <Button style={{color:'rgba(255,255,255,0.7)',fontWeight:'normal'}}>
+                        Resume
+                    </Button>
+                </div>
             </ContentSection>
 
 
@@ -134,39 +199,43 @@ export default function Home({projects}) {
                 titleText='Interested in working together?'
                 overrideTitlePadding={theme.spacing(0, 0, 2, 0)}
             >
-                <Typography style={{marginBottom:80,textAlign:'center',fontSize:'1.125em',opacity:0.7}}>Let's talk about your next project or role!</Typography>
+                <Typography style={{marginBottom:80,textAlign:'center',fontSize:'1.125em',opacity:0.7}}>Let's talk about your next project or available role!</Typography>
 
                 <Container fixed maxWidth='md'>
                     <Grid container justifyContent='center'>
-                        <Grid item xs={9} sm={10} md={5} className='' style={{border: '1px solid pink'}}>
-                            <p>rocket goes here</p>
-                        </Grid>
-                        <Grid item xs={9} sm={10} md={5}>
-                            <Grid container spacing={4} direction='column' alignItems='center' style={{border: '1px solid pink'}}>
-                                <Grid item xs={8} style={{border: '1px solid orange'}}>
+                        {/*<Grid item xs={9} sm={10} md={5} className='' style={{border: '1px solid transparent'}}>*/}
+                            {/*<p>rocket goes here</p>*/}
+                        {/*</Grid>*/}
+                        <Grid item xs={10} sm={8} md={6} lg={5}>
+                            <Grid container spacing={4} direction='column' style={{border: '1px solid transparent'}}>
+                                <Grid item style={{border: '1px solid transparent'}}>
                                     <Button
                                         color='default'
                                         startIcon={<LinkedInIcon size={24} />}
                                         fullWidth
+                                        style={{paddingTop: 12, paddingBottom: 12}}
                                     >
                                         Connect on LinkedIn
                                     </Button>
                                 </Grid>
 
-                                <Grid item xs={12} style={{border: '1px solid orange'}}>
+                                <Grid item style={{border: '1px solid transparent'}}>
                                     <Button
                                         color='default'
                                         startIcon={<PhoneIcon size={24} />}
                                         fullWidth
+                                        style={{paddingTop: 12, paddingBottom: 12}}
                                     >
                                         Connect via Phone
                                     </Button>
                                 </Grid>
 
-                                <Grid item xs={8} style={{border: '1px solid orange'}}>
+                                <Grid item style={{border: '1px solid transparent'}}>
                                     <Button
                                         color='default'
                                         startIcon={<MailIcon size={24} />}
+                                        fullWidth
+                                        style={{paddingTop: 12, paddingBottom: 12}}
                                     >
                                         Send an Email
                                     </Button>
@@ -190,12 +259,6 @@ export default function Home({projects}) {
                     }}
                 />
             </ContentSection>
-
-
-
-
-
-
         </>
     )
 

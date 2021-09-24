@@ -21,7 +21,7 @@ const useStyles = makeStyles({
     }
 })
 
-const ContentSection = ({topPadding = 0,bottomPadding = 0,titleText,titleAlign = 'center',titleTheme = 'light',overrideTitlePadding = null,children}) => {
+const ContentSection = ({maxWidth = 'lg',topPadding = 0,bottomPadding = 0,titleText,titleAlign = 'center',titleTheme = 'light',overrideTitlePadding = null,children}) => {
     const classes = useStyles()
     const theme = useTheme()
 
@@ -33,7 +33,7 @@ const ContentSection = ({topPadding = 0,bottomPadding = 0,titleText,titleAlign =
 
     return (
         <section className={classes.root} style={{paddingTop: topPadding, paddingBottom: bottomPadding}}>
-            <Container fixed maxWidth='lg' style={{border: '1px solid transparent'}}>
+            <Container fixed maxWidth={maxWidth} style={{border: '1px solid transparent'}}>
                 <Grid container style={{border: '1px solid transparent'}}>
                     <Grid item xs={12} style={{border: '1px solid transparent'}}>
                         <Typography variant='h3' style={{padding:overrideTitlePadding,color:titleColor,textAlign:titleAlign}}>{titleText}</Typography>
