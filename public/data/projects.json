@@ -1,0 +1,105 @@
+{
+  "showcase": [
+    {
+      "name": "Alpha Space Launch",
+      "description": "An unreleased website where customers can send class rings and other paraphernalia to space and receive a certificate of flight, photos, plaque and other items. (Canceled by client for lack of market).",
+      "links": {
+        "demo": "https://alphaweb.dev.snaju.com",
+        "code": null
+      },
+      "images": [
+        {
+          "main": true,
+          "src": "/imgs/projects/alphaspace-launch.gif",
+          "alt": "Alpha Space Launch website screenshots.",
+          "caption": null
+        }
+      ],
+      "tags": [
+        "Laravel",
+        "Stripe API"
+      ]
+    },
+    {
+      "name": "OSO Candle",
+      "description": "Candle subscription website where users choose their favorite scent and candles get shipped to them. Basic machine learning algorithm used to classify and recommend scents based on a scent profile.",
+      "links": {
+        "demo": "https://osocandle.com/",
+        "code": null
+      },
+      "images": [
+        {
+          "main": true,
+          "src": "/imgs/projects/oso-candle.gif",
+          "alt": "OSO Candle website screenshots.",
+          "caption": null
+        }
+      ],
+      "tags": [
+        "Laravel",
+        "Stripe Checkout API",
+        "Machine Learning"
+      ]
+    },
+    {
+      "name": "Student Pilot Portal",
+      "description": "An e-learning platform where anyone can learn to fly airplanes.",
+      "links": {
+        "demo": "https://studentpilotportal.com",
+        "code": null
+      },
+      "images": [
+        {
+          "main": true,
+          "src": "/imgs/projects/spp.gif",
+          "alt": "Student Pilot Portal website screenshots.",
+          "caption": null
+        }
+      ],
+      "tags": [
+        "Laravel",
+        "NextJS",
+        "NodeJS",
+        "PixiJS",
+        "Material UI",
+        "Typescript",
+        "SASS/SCSS"
+      ]
+    }
+  ],
+  "openSource": [
+    {
+      "name": "Best-README-Template",
+      "description": "An awesome README template to jumpstart your projects!",
+      "forks": "8.5K",
+      "stars": "3.6K",
+      "contributors": "7",
+      "links": {
+        "github": "",
+        "demo": ""
+      }
+    },
+    {
+      "name": "snaju/inception/framework",
+      "description": "A lightweight PHP based web framework built by Snaju Development.",
+      "forks": "8.5K",
+      "stars": "3.6K",
+      "contributors": "7",
+      "links": {
+        "github": "",
+        "demo": ""
+      }
+    },
+    {
+      "name": "Best-README-Generator",
+      "description": "An awesome README template to jumpstart your projects!",
+      "forks": "8.5K",
+      "stars": "3.6K",
+      "contributors": "7",
+      "links": {
+        "github": "",
+        "demo": ""
+      }
+    }
+  ]
+}

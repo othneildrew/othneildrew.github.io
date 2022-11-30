@@ -1,3 +1,13 @@
+# Output & Build Files #
+###################
+dist/
+build/
+output/
+
+# Temporary Folders & Files #
+###################
+tmp/
+
 # Compiled source #
 ###################
 *.com
@@ -6,6 +16,7 @@
 *.exe
 *.o
 *.so
+.next/
 
 # Packages #
 ############
@@ -25,6 +36,10 @@
 *.log
 *.sql
 *.sqlite
+logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # OS generated files #
 ######################
@@ -35,3 +50,37 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+.cache
+.project
+.settings
+.tmproj
+nbproject
+.idea
+
+# Runtime Data #
+######################
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Environment Files #
+######################
+.env
+
+# Always-ignore Extensions #
+######################
+*.diff
+*.err
+*.orig
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+*.sass-cache
+
+# Package Libraries #
+######################
+vendor/
+node_modules/

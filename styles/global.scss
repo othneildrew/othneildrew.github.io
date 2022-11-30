@@ -1,0 +1,63 @@
+
+$brand-color--primary:      #b65296;
+$brand-color--secondary:    #6FCEDC;
+
+$color--white:              #ffffff;
+$color--black:              #000000;
+
+$bg-color: #140033;
+$body-text-color:           rgba(255, 255, 255, 0.78);
+
+//$font--primary:             'Roboto', sans-serif;
+//$font--secondary:           'Black Han Sans', sans-serif;
+//$font--tertiary:            'IBM Plex Sans Condensed', sans-serif;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    //scrollbar-width: auto;
+    // scrollbar-width: thin;
+    //scrollbar-color: rgba(240, 77, 78, 0.6) $bg-color;
+}
+
+*::-webkit-scrollbar {
+     width: 17px;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.12);
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+        transition: 0.4s all;
+    }
+
+    &:active {
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+}
+
+::selection {
+    background: $brand-color--primary;
+}
+
+body {
+    background-color: $bg-color;
+    //color: $body-text-color;
+    //font-family: $font--primary;
+    //font-size: 16px;
+    //overflow-x: hidden;
+    //border: 1px solid green;
+
+
+    //overflow-x: clip;
+
+    //overflow-x: clip;
+}

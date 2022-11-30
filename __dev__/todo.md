@@ -1,0 +1,14 @@
+# TODOs
+- update readme template to the newest one
+- download all assets and designs
+- web page layout
+- web page animations
+- optimize page for SEO
+    - aria tags
+    - actually test with screen reader
+- optimizations
+  - html5 tag usage
+  - accessibility
+  - page SEO and other html meta tags
+  - autoprefixer 
+    - fix sizing w/ SvgIcon

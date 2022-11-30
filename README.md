@@ -10,7 +10,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/othneildrew/othneildrew.github.io">
-    <img src="./images/airplane.png" alt="Logo" width="80" height="80">
+    <img src="src/public/imgs/airplane.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">othneildrew.github.io</h3>
@@ -104,6 +104,7 @@ Project Link: [https://github.com/othneildrew/othneildrew.github.io](https://git
 * [FakeLoader.js](https://joaopereirawd.github.io/fakeLoader.js)
 * [WOW.js](https://www.delac.io/wow)
 * [EZGif.com](https://ezgif.com/maker)
+* [Text to ASCII Art Generator](https://patorjk.com/software/taag/#p=display&f=Big%20Money-ne&t=Hello%20World)
 
 
 
@@ -115,4 +116,4 @@ Project Link: [https://github.com/othneildrew/othneildrew.github.io](https://git
 [license-url]: https://choosealicense.com/licenses/mit
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: ./images/projects/portfolio.jpg
+[product-screenshot]: src/public/imgs/projects/portfolio.jpg
