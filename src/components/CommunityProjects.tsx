@@ -3,14 +3,6 @@ import { SectionHeader } from '@/components/SectionHeader'
 import { CommunityProjectCard } from './CommunityProjectCard'
 import { Ufo } from '@/components/illustrations/Ufo'
 
-export interface Project {
-  name: string
-  description: string
-  forks?: number
-  stars?: number
-  contributors?: number
-}
-
 export const CommunityProjects = () => {
   const projects = useMemo(
     () => [
@@ -20,12 +12,14 @@ export const CommunityProjects = () => {
         forks: 8500,
       },
       {
-        name: 'Best-README-Template',
-        description: 'An awesome README template to jumpstart your projects!',
+        name: 'codedino',
+        description:
+          'A community-driven developer toolbox for frontend developers.',
       },
       {
-        name: 'Best-README-Template',
-        description: 'An awesome README template to jumpstart your projects!',
+        name: 'snaju/inception-framework',
+        description:
+          'An extremely lightweight PHP-based web framework built with the intention of quick app prototypes using PHP. The architecture takes an API-first approach with a flexible plugin architecture to add functionality like rendering templates.',
       },
     ],
     []
@@ -41,8 +35,8 @@ export const CommunityProjects = () => {
       <SectionHeader>Community Projects</SectionHeader>
 
       <div className='mx-auto columns-1 md:columns-2 lg:columns-3'>
-        {projects.map(({ name }) => (
-          <CommunityProjectCard key={name} />
+        {projects.map((props) => (
+          <CommunityProjectCard key={props.name} {...props} />
         ))}
       </div>
     </section>

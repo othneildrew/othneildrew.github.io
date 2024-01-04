@@ -1,0 +1,12 @@
+{
+  "name": "Othneil Drew",
+  "title": "Full Stack Developer",
+  "location": "Greater Houston Area",
+  "openToRelocate": true,
+  "contact": {
+    "phone": "",
+    "email": "othneil@duck.com",
+    "website": "https://othneildrew.com"
+  },
+  "summary": "UI/UX pro with #{baseline_years_of_experience}+ years of diverse leadership and management experience ready to put to use. Massive appetite for learning. Looking to join a team where I can solve problems that improve the quality of life for others in a community that shares my passion for technology."
+}

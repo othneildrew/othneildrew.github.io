@@ -17,6 +17,11 @@ export default function Page() {
             <br /> experiences for the web.
           </h2>
 
+          <h2 className='font-display text-5xl mb-[43px] text-secondary-color'>
+            I create amazing
+            <br /> experiences that help 10x your business' growth.
+          </h2>
+
           <div className='flex align-middle gap-4'>
             <button className='dark:bg-primary-color text-white py-2.5 px-12 rounded-full font-bold'>
               Hire Me
