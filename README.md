@@ -115,4 +115,4 @@ Project Link: [https://github.com/othneildrew/othneildrew.github.io](https://git
 [license-url]: https://choosealicense.com/licenses/mit
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: ./images/projects/portfolio.jpg
+[product-screenshot]: public/images/projects/portfolio.jpg

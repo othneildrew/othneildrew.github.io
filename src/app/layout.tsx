@@ -1,4 +1,5 @@
 import '../styles/global.css'
+import { ReactNode } from 'react'
 import { Roboto, Black_Han_Sans } from 'next/font/google'
 
 const roboto = Roboto({
@@ -18,14 +19,17 @@ const blackHanSans = Black_Han_Sans({
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: ReactNode
 }) {
   return (
     <html
       lang='en'
       className={`dark ${blackHanSans.variable} ${roboto.variable} font-sans`}
     >
-      <body className='relative'>{children}</body>
+      <head>
+        <title>Othneil Drew - Senior Software Engineer | UI/UX Pro</title>
+      </head>
+      <body className='relative overflow-x-hidden'>{children}</body>
     </html>
   )
 }

@@ -12,7 +12,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: trnspraent;
+  /*background: var(--primary);*/
 }
 
 ::-webkit-scrollbar-thumb {

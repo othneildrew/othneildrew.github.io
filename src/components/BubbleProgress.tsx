@@ -26,6 +26,7 @@ export const BubbleProgress = ({
     <div className='flex justify-center py-6 gap-[10px]'>
       {Array.from({ length: steps ?? 0 }).map((_, i) => (
         <div
+          key={i}
           className={`dark:bg-${
             i === currentStep ? 'primary-color' : 'white'
           } cursor-pointer rounded-full w-[16px] h-[16px] hover:scale-125`}
