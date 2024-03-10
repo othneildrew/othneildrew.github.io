@@ -15,12 +15,12 @@ export const Testimonials = () => {
 
       <div>
         <div className='dark:bg-[#0d0020] mx-auto p-8 rounded min-h-[170px] max-w-[600px]'>
-          <p className='dark:text-white/70 text-lg'>
+          <p className='dark:text-white/60 text-lg'>
             Throughout my expereicne, I have met very few with such a vast array
             of knowledge and skills as Mr. Drew. [He] continues to astound me
             with how quickly he can learn and apply new skills.
           </p>
-          <cite></cite>
+          <cite className="block mt-2 dark:text-white">Captain Roscoe Edwards, Manager</cite>
         </div>
       </div>
 

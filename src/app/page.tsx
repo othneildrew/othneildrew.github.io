@@ -9,6 +9,7 @@ import {AboutMe} from '@/components/AboutMe';
 import {Moon} from '@/components/Moon';
 import {useState} from 'react';
 import {Loader} from '@/components/Loader';
+import {Navbar} from '@/components/Navbar';
 
 export default function Page() {
   const [isLoading] = useState(true);
@@ -25,17 +26,16 @@ export default function Page() {
     <div>
       <Moon />
 
+      <Navbar />
+
 
       <section className='relative container mx-auto px-4 h-dvh'>
         <div className='h-full pb-20 flex flex-col justify-center'>
-          <p className='dark:text-white/70 text-xl pb-5'>
+          <p className='dark:text-white/70 text-xl pb-6'>
             Senior Software Engineer | UI/UX Pro
           </p>
+
           <h1 className='font-black-han text-6xl dark:text-white mb-5'>Othneil Drew</h1>
-          {/*<h2 className='font-display text-5xl mb-[43px] text-secondary-color'>*/}
-          {/*  I create amazing*/}
-          {/*  <br /> experiences for the web.*/}
-          {/*</h2>*/}
 
           <h2 className='font-black-han text-3xl mb-[43px] text-secondary-color'>
             Focusing on creating bold, unique, and aMaZInG<br />
@@ -59,15 +59,15 @@ export default function Page() {
 
       <AboutMe />
 
-      <CommunityProjects/>
-      <Testimonials/>
+      <CommunityProjects />
+      <Testimonials />
 
 
       <Contact />
 
 
-      <AboutThisProject/>
-      <SocialLinks/>
+      <AboutThisProject />
+      <SocialLinks />
     </div>
   )
 }

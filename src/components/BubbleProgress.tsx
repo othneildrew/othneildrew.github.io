@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from 'react'
 import { FiPlay, FiPause } from 'react-icons/fi'
+import clsx from 'clsx'
 
 export interface BubbleProgressProps {
   steps?: number
@@ -23,13 +24,19 @@ export const BubbleProgress = ({
   }
 
   return (
-    <div className='flex justify-center py-6 gap-[10px]'>
+    <div className='flex justify-center py-6 gap-[14px]'>
       {Array.from({ length: steps ?? 0 }).map((_, i) => (
         <div
           key={i}
-          className={`dark:bg-${
-            i === currentStep ? 'primary-color' : 'white'
-          } cursor-pointer rounded-full w-[16px] h-[16px] hover:scale-125`}
+          // className={`dark:bg-${
+          //   i === currentStep ? 'primary-color' : 'white'
+          // } cursor-pointer rounded-full w-[16px] h-[16px] hover:scale-125`}
+          className={
+            clsx('cursor-pointer rounded-full h-[16px] hover:scale-125', {
+              'dark:bg-primary-color scale-150 w-[16px]': i === currentStep,
+              'dark:bg-white w-[24px]': i !== currentStep,
+            })
+          }
         />
       ))}
 
