@@ -202,8 +202,18 @@ body {
   font-size: 2.4em;
 }
 
-#bio-container p {
+#bio-container {
+  color: rgba(255 255 255 / .78);
+}
+
+.lead {
   color: #ffffff;
+  opacity: 1;
+}
+
+#bio-container small {
+  display: block;
+  margin-bottom: 16px;
 }
 
 /* Responsive style to maintain 16:9 aspect ratio on YouTube video */
@@ -245,7 +255,7 @@ body {
 
 #testimonials p.lead {
   font-size: 2em;
-  font-weight: 600
+  font-weight: 600;
 }
 
 .blockquote-footer cite {
