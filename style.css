@@ -95,6 +95,10 @@ body {
   height: inherit;
 }
 
+.not-allowed {
+  cursor: not-allowed;
+}
+
 #home {
   position: relative;
   background: url('images/dark-code-bg.png') no-repeat center;
@@ -134,12 +138,23 @@ body {
 
 .btn-CTA {
 	border: 3px solid #ffffff;
-	background-color: transparent;
+	background-color: #ffffff;
+    color: #192bc2;
 }
 
-.btn-CTA:hover {
+.btn-CTA-secondary {
+  border: 3px solid #ffffff;
+  background-color: transparent;
+}
+
+.btn-CTA-secondary:hover {
   background-color: #ffffff;
-  color: #53dd6c;
+  color: #192bc2;
+}
+
+.flex-with-gap {
+  display: flex;
+  grid-gap: 16px;
 }
 
 #home #top-navbar {
@@ -206,7 +221,7 @@ body {
   color: rgba(255 255 255 / .78);
 }
 
-.lead {
+#bio-container .lead {
   color: #ffffff;
   opacity: 1;
 }

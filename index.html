@@ -27,7 +27,7 @@
     <div id="menu" class="overlay-menu">
       <a href="javascript:void(0)" class="close-btn" id="close-menu-btn">&times;</a>
       <div class="menu-links">
-        <a class="menu-link" href="#latest-work">Latest Work</a>
+        <a class="menu-link" href="#latest-work">Previous Work</a>
         <a class="menu-link" href="#about">About</a>
         <a class="menu-link" href="#skills">Skills</a>
         <a class="menu-link" href="#testimonials">Testimonials</a>
@@ -53,7 +53,10 @@
           <div class="container wow bounceInLeft" data-wow-delay="1.2s">
             <h1 class="title">Senior Software Engineer | UI/UX Pro</h1>
             <p class="subtitle">Focusing on creating <strong>bold</strong>, <i>unique</i>, and AmAzInG experiences<br /> that help 10x your business' growth</p>
-            <a class="btn custom-btn btn-CTA" href="#contact" role="button">Hire Me</a>
+            <div class="flex-with-gap">
+              <a class="btn custom-btn btn-CTA" href="#contact" role="button">Hire Me</a>
+              <a class="btn custom-btn btn-CTA-secondary" href="./assets/resumes/OthneilDrewWebDeveloperResume.pdf" target="_blank" role="button">Resume</a>
+            </div>
           </div>
         </div>
 
@@ -71,7 +74,7 @@
       <!-- Latest Work -->
       <div class="section" id="latest-work">
         <div class="container">
-          <h2 class="section-title text-dark-blue">Latest Work</h2>
+          <h2 class="section-title text-dark-blue">Previous Work</h2>
 
           <div class="row my-5 py-5">
             <div class="col-12 col-lg-7">
@@ -91,7 +94,7 @@
                 <li class="list-inline-item">
                   <a href="https://alphaweb.dev.snaju.com" target="_blank" class="btn custom-btn btn-demo">Visit Project <i class="fas angle-right"></i></a>
                 </li>
-                <li class="list-inline-item mt-3 md-lg-0">
+                <li class="list-inline-item mt-3 md-lg-0 not-allowed">
                   <p><i class="fas fa-eye-slash"></i> Source private</p>
                 </li>
               </ul>
@@ -117,7 +120,7 @@
                 <li class="list-inline-item">
                   <a href="https://osocandle.com" target="_blank" class="btn custom-btn btn-demo">Visit Project <i class="fas angle-right"></i></a>
                 </li>
-                <li class="list-inline-item mt-3 md-lg-0">
+                <li class="list-inline-item mt-3 md-lg-0 not-allowed">
                   <p><i class="fas fa-eye-slash"></i> Source private</p>
                 </li>
               </ul>
@@ -133,7 +136,7 @@
               <p>An e-learning platform where anyone can learn to fly airplanes.</p>
 
               <ul>
-                <li>Laravel 8 Backend (API) / NextJS Frontend</li>
+                <li>Laravel 10 Backend (API) / NextJS Frontend</li>
                 <li>Material UI design guidelines</li>
                 <li>Canvas rendering for interactive simulators and learning tools</li>
                 <li>Webpack, ES6+, Object-oriented programming</li>
@@ -144,7 +147,7 @@
                 <li class="list-inline-item">
                   <a href="https://studentpilotportal.com" target="_blank" class="btn custom-btn btn-demo">Visit Project <i class="fas angle-right"></i></a>
                 </li>
-                <li class="list-inline-item mt-3 md-lg-0">
+                <li class="list-inline-item mt-3 md-lg-0 not-allowed">
                   <p><i class="fas fa-eye-slash"></i> Source private</p>
                 </li>
               </ul>
@@ -164,15 +167,17 @@
               <img class="img-fluid" id="portrait" src="./images/portrait.jpg" alt="Othneil Drew Portrait">
             </div>
             <div class="col-12 col-md-8" id="bio-container">
-              <p class="lead"><strong>Othneil Drew</strong> is an extremely creative visionary with a strong background in UI/UX design, web development, strategic planning/marketing, and technical writing.</p>
+              <p class="lead"><strong>Othneil Drew</strong> is an extremely creative individual with a strong background in UI/UX design, product lifecycle management and strategic planning/marketing.</p>
 
               <small><i>Yes, I'm going to speak about myself in the third person :)</i></small>
 
+              <p>He has successfully lead high-performing teams and improve frontend workflow as a team lead — allowing the team to release key updates to customers more frequently.</p>
+
               <p>He is the founder of Student Pilot Portal, an online platform that enables aspiring aviators to learn about aviation, share their passion for flight, and connect with others worldwide.</p>
 
-              <p>With 900+ hours of volunteered service to the aviation community, he serves as an advocate for promoting youths education in the industry and is actively involved with many organizations like the Organization of Black Aerospace Professionals, Virgin Islands Chapter Tuskegee Airmnen, Inc., U.S. Dream Academy, and the United States Coast Guard Auxiliary.</p>
+              <p>With 900+ hours of volunteered service to the aviation community, he serves as an advocate for promoting youths education in the industry and is actively involved with many organizations like the Organization of Black Aerospace Professionals, Virgin Islands Chapter Tuskegee Airmen, Inc., U.S. Dream Academy, and the United States Coast Guard Auxiliary.</p>
 
-              <p>He has raised more than $2,000 in donations for nonprofits and is responsible for an initial 15% increase in his school's student pilot enrollment which he obtained through social media and print recruitment campaigns.</p>
+<!--              <p>He has raised more than $2,000 in donations for nonprofits and is responsible for an initial 15% increase in his school's student pilot enrollment which he obtained through social media and print recruitment campaigns.</p>-->
 
               <p>Drew currently works as a Software Engineer in Houston Texas. His other interests are flight simulation, photography, gaming, guitar, and the show NCIS: Los Angeles.</p>
             </div>
@@ -188,36 +193,75 @@
           <div class="row mt-5" id="skills">
             <div class="col-12 col-md-6 col-lg-4">
               <div class="skill-card my-3">
-                <p class="text-center"><i class="fas fa-pencil-ruler"></i> Design</p>
-                <ul class="mt-2">
+                <p class="text-center"><i class="fas fa-pencil-ruler"></i> Toolkit</p>
+
+                <p class="mt-4 mb-0 text-light-green">Workflow Tools</p>
+                <ul class="m-0">
+                  <li>Jira</li>
+                  <li>Git (Git Flow)</li>
+                  <li>codemods (jscodeshift)</li>
+                  <li>Unit Testing </li>
+                  <li>AWS</li>
+                  <li>GitHub</li>
+                  <li>NPM</li>
+                  <li>Webpack</li>
+                  <li>Babel</li>
+                  <li>Gulp</li>
+                  <li>Bitbucket</li>
+                  <li>SCRUM / Agile Methodologies</li>
+                  <li>Chrome Developer Tools</li>
+                  <li>Asana</li>
+                </ul>
+
+                <p class="mt-4 mb-0 text-light-green">User research</p>
+                <ul class="mt-0">
                   <li>UI/UX design</li>
                   <li>Wireframing</li>
                   <li>Prototyping</li>
+                  <li>Heatmaps & Web Analytics</li>
+                  <li>Lighthouse Analytics</li>
                   <li>User Stories</li>
+                  <li>Datadog</li>
+                  <li>Hotjar</li>
                 </ul>
 
-                <p class="mt-4 mb-0 text-light-green">Design Tool Kit</p>
+                <p class="mt-4 mb-0 text-light-green">Design Tools</p>
                 <ul class="m-0">
+                  <li>Figma</li>
+                  <li>Affinity Designer</li>
+                  <li>GIMP</li>
+                  <li>Fusion 360</li>
                   <li>Moqups</li>
                   <li>Adobe Lightroom</li>
-                  <li>Affinity Designer</li>
-                  <li>Vectornator</li>
-                  <li>GIMP</li>
-                  <li>Figma</li>
-                  <li>Fusion 360</li>
+                  <li>Blender (learning)</li>
                 </ul>
+
+
               </div>
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
               <div class="skill-card my-3">
-                <p class="text-center"><i class="fas fa-code"></i> Development</p>
+                <p class="text-center"><i class="fas fa-code"></i> Languages, Libraries & Frameworks</p>
                 <p class="mt-2 mb-0 text-light-green">Front End</p>
                 <ul class="m-0">
                   <li>React</li>
-                  <li>NextJS</li>
+                  <li>React Native</li>
+                  <li>Next.js</li>
+                  <li>Typescript</li>
+                  <li>Redux & RTK Query</li>
                   <li>Javascript</li>
+                  <li>Pixi.js</li>
+                  <li>Cesium.js</li>
+                  <li>Electron</li>
+                  <li>Tauri</li>
+                  <li>Semantic UI</li>
+                  <li>Tailwind CSS</li>
+                  <li>Bulma CSS</li>
+                  <li>HTMX</li>
                   <li>HTML5</li>
+                  <li>SASS/SCSS</li>
+                  <li>LESS</li>
                   <li>CSS3</li>
                   <li>JQuery</li>
                   <li>Bootstrap</li>
@@ -226,26 +270,21 @@
 
                 <p class="mt-4 mb-0 text-light-green">Back End</p>
                 <ul class="m-0">
-                  <li>REST / MySQL</li>
+                  <li>REST / JSON</li>
+                  <li>MySQL</li>
                   <li>PHP</li>
                   <li>Apache</li>
                   <li>Laravel</li>
                   <li>Nginx</li>
                   <li>Node.js</li>
                   <li>Python</li>
-                </ul>
-
-                <p class="mt-4 mb-0 text-light-green">Developer Tool Kit</p>
-                <ul class="m-0">
-                  <li>WebStorm / PHP Storm</li>
-                  <li>Atom Text Editor</li>
-                  <li>Sublime Text Editor</li>
-                  <li>Git (Git Flow)</li>
-                  <li>GitHub</li>
-                  <li>Bitbucket</li>
-                  <li>SCRUM / Agile Methodologies</li>
-                  <li>Chrome Developer Tools</li>
-                  <li>Asana</li>
+                  <li>Express</li>
+                  <li>Sequelize</li>
+                  <li>MongoDB</li>
+                  <li>Redis</li>
+                  <li>Linux</li>
+                  <li>Nginx</li>
+                  <li>Apache</li>
                 </ul>
               </div>
             </div>
@@ -253,23 +292,36 @@
             <div class="col-12 col-md-6 col-lg-4">
               <div class="skill-card my-3">
                 <p class="text-center"><i class="fas fa-plane-departure"></i> Other</p>
+
+                <p class="mt-4 mb-0 text-light-green">Communication Protocols</p>
                 <ul class="mt-2">
-                  <li>Embedded Systems</li>
-                  <li>Arduino</li>
-                  <li>Raspberry PI</li>
-                  <li>Electronics (novice)</li>
+                  <li>HTTP/S</li>
+                  <li>UDP</li>
+                  <li>TCP/IP (Sockets)</li>
+                  <li>FTP</li>
                   <li>WebRTC</li>
-                  <li>Expert "Googler"</li>
+                  <li>SSH</li>
+                  <li>Serial</li>
+                  <li>I2C</li>
                 </ul>
 
-<!--                <p class="mt-4 mb-0 text-light-green">Flight Hours</p>-->
-<!--                <ul class="m-0">-->
-<!--                  <li>Total: 160+</li>-->
-<!--                  <li>PIC: 81.7</li>-->
-<!--                  <li>Cross-Country: 68.6</li>-->
-<!--                  <li>Solo: 10</li>-->
-<!--                  <li>Night: 21.6</li>-->
-<!--                </ul>-->
+                <p class="mt-4 mb-0 text-light-green">Other Tech & Skills</p>
+                <ul class="mt-2">
+                  <li>Embedded Systems</li>
+                  <li>Microservice Architecture</li>
+                  <li>Async/Await/Promises</li>
+                  <li>OpenGraph Tools</li>
+                  <li>Raspberry PI</li>
+                  <li>Arduino</li>
+                  <li>ESP32/8266</li>
+                  <li>MongoDB</li>
+                  <li>CI/CD & Code Automation</li>
+                  <li>ITAR & 508 Compliance</li>
+                  <li>Database Design & Normalization</li>
+                  <li>Data Scraping</li>
+                  <li>General Electronics (novice)</li>
+                  <li>Expert "Googler"</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -281,7 +333,7 @@
       <!-- Testimonials -->
       <div class="section" id="testimonials">
         <div class="container">
-          <h2 class="section-title pb-5 text-dark-blue font-weight-bold text-center">Why Work With Me</h2>
+          <h2 class="section-title pb-5 text-dark-blue font-weight-bold text-center">Why Hire Me</h2>
 
           <div class="row my-5">
             <div class="col-12 my-3 col-md-4 text-center">
@@ -292,16 +344,16 @@
             <div class="col-12 my-3 col-md-4 text-center">
               <i class="why-work-icons wow pulse fas fa-lightbulb" data-wow-delay="2s"></i>
               <p class="lead">Problem Solver</p>
-              <p>At the heart of every successful business is a problem solver. I thrive under pressure and in fast-paced environments. </p>
+              <p>At the heart of every successful business is a problem solver. I thrive under pressure and in fast-paced environments.</p>
             </div>
             <div class="col-12 my-3 col-md-4 text-center">
               <i class="why-work-icons wow pulse fas fa-bolt" data-wow-delay="2s"></i>
               <p class="lead">Fast Learner</p>
-              <p>I can learn anything, just give me 5 minutes ;) I'm valuable to your company beacuse of my ability to be molded to your stack.</p>
+              <p>I can learn anything, just give me 5 minutes ;) I'm valuable to your company because of my ability to be molded to your stack.</p>
             </div>
           </div>
 
-          <div class="row my-5 wow fadeInUp">
+          <div class="row my-5">
             <div class="col-12">
               <h2 class="section-title pb-5 text-dark-blue font-weight-bold text-center">Testimonials</h2>
             </div>
@@ -345,9 +397,9 @@
       <div class="section d-flex" id="contact">
         <div class="container align-self-center">
           <h2 class="section-title text-light-green font-weight-bold text-center">Interested in working together?</h2>
-          <p class="lead text-white text-center">Let's talk about your next project!</p>
+          <p class="lead text-white text-center">Let's talk about your next project or role!</p>
 
-          <div class="row mt-5">
+          <div class="row mt-3">
             <div class="col-12 col-md-6 offset-md-3 mt-5">
 
             <a href="https://othneildrew.typeform.com/to/HIPEvd" target="_blank" class="typeform-share btn d-block custom-btn btn-contact" id="quote-btn"  data-mode="drawer_right" data-hide-headers=true data-hide-footer=true data-submit-close-delay="5"><i class="fas fa-code-branch"></i> Get a Project Quote</a>
