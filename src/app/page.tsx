@@ -1,3 +1,5 @@
+'use client';
+
 import { CommunityProjects } from '@/components/CommunityProjects'
 import { Testimonials } from '@/components/Testimonials'
 import { AboutThisProject } from '@/components/AboutThisProject'
@@ -5,8 +7,20 @@ import { SocialLinks } from '@/components/SocialLinks'
 import {Contact} from '@/components/Contact';
 import {AboutMe} from '@/components/AboutMe';
 import {Moon} from '@/components/Moon';
+import {useState} from 'react';
+import {Loader} from '@/components/Loader';
 
 export default function Page() {
+  const [isLoading] = useState(true);
+
+
+
+
+  if (isLoading) {
+    return <Loader />;
+  }
+
+
   return (
     <div>
       <Moon />
