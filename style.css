@@ -1,15 +1,19 @@
-/* Extra small devices (portrait phones, less than 576px) */
-
 @import url('https://fonts.googleapis.com/css?family=Bad+Script|Roboto|Material+Icons');
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', arial, sans-serif, serif;
+  background-image: radial-gradient(rgba(123, 123, 123, 0.08) 1px, transparent 1px);
+  background-size: 14px 14px;
 }
 
 .bad-script-font {
@@ -29,7 +33,7 @@ body {
 	min-width: 180px;
 	height: auto;
 	outline: none;
-	border-radius: 0px;
+	border-radius: 4px;
 	color: #ffffff;
   font-size: 1.2em;
 	font-weight: 700;
@@ -132,8 +136,9 @@ body {
 }
 
 .subtitle {
-  color: #53dd6c;
+  color: #ffffff;
   font-size: 1.8em;
+  margin-bottom: 48px;
 }
 
 .btn-CTA {
@@ -251,11 +256,16 @@ body {
   background-color: #000122;
 }
 
+.img-fluid {
+  border-radius: 8px;
+}
+
 .skill-card {
   padding: 20px 30px;
   width: 100%;
   height: auto;
   box-shadow: 8px 15px 25px rgba(0, 0, 0, .2);
+  border-radius: 8px;
   background-color: #ffffff;
 }
 
@@ -373,26 +383,5 @@ input.custom-input::placeholder {
     bottom: 20px;
     right: 30px;
   }
-
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-
-
-
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-
-
-
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-
-
 
 }
