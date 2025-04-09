@@ -1,15 +1,27 @@
-/* Extra small devices (portrait phones, less than 576px) */
-
 @import url('https://fonts.googleapis.com/css?family=Bad+Script|Roboto|Material+Icons');
+
+:root {
+  --transition_duration: 1200ms;
+  --transition_duration_slow: 9000ms;
+  --ease_out_quint: cubic-bezier(0.23, 1, 0.32, 1);
+  --cascade_interval: 150ms;
+}
+
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', arial, sans-serif, serif;
+  background-image: radial-gradient(rgba(123, 123, 123, 0.08) 1px, transparent 1px);
+  background-size: 14px 14px;
 }
 
 .bad-script-font {
@@ -29,7 +41,7 @@ body {
 	min-width: 180px;
 	height: auto;
 	outline: none;
-	border-radius: 0px;
+	border-radius: 4px;
 	color: #ffffff;
   font-size: 1.2em;
 	font-weight: 700;
@@ -132,8 +144,9 @@ body {
 }
 
 .subtitle {
-  color: #53dd6c;
+  color: #ffffff;
   font-size: 1.8em;
+  margin-bottom: 48px;
 }
 
 .btn-CTA {
@@ -251,11 +264,16 @@ body {
   background-color: #000122;
 }
 
+.img-fluid {
+  border-radius: 8px;
+}
+
 .skill-card {
   padding: 20px 30px;
   width: 100%;
   height: auto;
   box-shadow: 8px 15px 25px rgba(0, 0, 0, .2);
+  border-radius: 8px;
   background-color: #ffffff;
 }
 
@@ -376,23 +394,63 @@ input.custom-input::placeholder {
 
 }
 
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-
-
-
+.animate {
+  display: block;
+  transition-duration: var(--transition_duration);
+  transition-timing-function: var(--ease_out_quint);
 }
 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-
-
-
+.animate.fadein-up {
+  opacity: 0;
+  transform: translate3d(0, 50px, 0);
 }
 
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-
-
-
+.animate.fadein-down {
+  opacity: 0;
+  transform: translate3d(0, -20px, 0);
 }
+
+.animate.fadein-scale1 {
+  opacity: 0;
+  transform: scale(0.7);
+}
+
+.animate.show {
+  opacity: 1;
+}
+
+.animate.show[data-cascade-slow] {
+  transition-duration: var(--transition_duration_slow);
+}
+
+.animate.show.fadein-up,
+.animate.show.fadein-down {
+  transform: translate3d(0, 0, 0);
+}
+
+.animate.show.fadein-scale1 {
+  transform: scale(1);
+}
+
+/* Transition delays from 0 to 20 */
+.animate.show[data-animation-delay="0"] { transition-delay: calc(var(--cascade_interval) * 0); }
+.animate.show[data-animation-delay="1"] { transition-delay: calc(var(--cascade_interval) * 1); }
+.animate.show[data-animation-delay="2"] { transition-delay: calc(var(--cascade_interval) * 2); }
+.animate.show[data-animation-delay="3"] { transition-delay: calc(var(--cascade_interval) * 3); }
+.animate.show[data-animation-delay="4"] { transition-delay: calc(var(--cascade_interval) * 4); }
+.animate.show[data-animation-delay="5"] { transition-delay: calc(var(--cascade_interval) * 5); }
+.animate.show[data-animation-delay="6"] { transition-delay: calc(var(--cascade_interval) * 6); }
+.animate.show[data-animation-delay="7"] { transition-delay: calc(var(--cascade_interval) * 7); }
+.animate.show[data-animation-delay="8"] { transition-delay: calc(var(--cascade_interval) * 8); }
+.animate.show[data-animation-delay="9"] { transition-delay: calc(var(--cascade_interval) * 9); }
+.animate.show[data-animation-delay="10"] { transition-delay: calc(var(--cascade_interval) * 10); }
+.animate.show[data-animation-delay="11"] { transition-delay: calc(var(--cascade_interval) * 11); }
+.animate.show[data-animation-delay="12"] { transition-delay: calc(var(--cascade_interval) * 12); }
+.animate.show[data-animation-delay="13"] { transition-delay: calc(var(--cascade_interval) * 13); }
+.animate.show[data-animation-delay="14"] { transition-delay: calc(var(--cascade_interval) * 14); }
+.animate.show[data-animation-delay="15"] { transition-delay: calc(var(--cascade_interval) * 15); }
+.animate.show[data-animation-delay="16"] { transition-delay: calc(var(--cascade_interval) * 16); }
+.animate.show[data-animation-delay="17"] { transition-delay: calc(var(--cascade_interval) * 17); }
+.animate.show[data-animation-delay="18"] { transition-delay: calc(var(--cascade_interval) * 18); }
+.animate.show[data-animation-delay="19"] { transition-delay: calc(var(--cascade_interval) * 19); }
+.animate.show[data-animation-delay="20"] { transition-delay: calc(var(--cascade_interval) * 20); }
