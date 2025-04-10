@@ -52,6 +52,19 @@ $(function() {
       dots: true,
       speed: 1500
     });
+
+    const emailBtn = document.getElementById('email-btn');
+    const emailBtnText = document.querySelector('#email-btn span');
+
+    emailBtn.addEventListener('click', function() {
+      navigator.clipboard.writeText('codeguydrew@gmail.com')
+          .then(() => {
+            emailBtnText.textContent = 'Copied!';
+            setTimeout(() => {
+              emailBtnText.textContent = 'Click to copy email';
+            }, 2000)
+          })
+    });
   }
 
   function openNav() {
