@@ -1,82 +1,44 @@
-$(function() {
+function openNav() {
+  document.body.style.overflow = "hidden";
+  document.querySelector("#menu").style.height = "100%";
+}
 
-  init();
+function closeNav() {
+  document.body.style.overflow = "auto";
+  document.querySelector("#menu").style.height = "0%";
+}
 
-  // Event Listeners
-  $('#menu-btn').click(function() {
-    openNav();
+function registerEvents() {
+  document.querySelector("#menu-btn").addEventListener("click", openNav);
+  document.querySelector("#close-menu-btn").addEventListener("click", closeNav);
+  document.querySelectorAll(".menu-link").forEach(function (link) {
+    link.addEventListener("click", closeNav);
   });
+}
 
-  $('#close-menu-btn').click(function() {
-    closeNav();
+function registerGSAPPlugins() {
+  gsap.registerPlugin(
+    MotionPathPlugin,
+    MorphSVGPlugin,
+    Observer,
+    ScrollTrigger,
+    ScrollSmoother,
+    ScrollToPlugin,
+    SplitText,
+  );
+}
+
+function setupSmoothScroll() {
+  ScrollSmoother.create({
+    smooth: 2,
+    effects: true,
   });
+}
 
-  $('.menu-link').click(function() {
-    closeNav();
+(function () {
+  document.addEventListener("DOMContentLoaded", function () {
+    registerEvents();
+    registerGSAPPlugins();
+    setupSmoothScroll();
   });
-
-  // Add Smooth Scrolling
-  $("a[href*='#']").click(function() {
-    if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") || location.hostname == this.hostname) {
-
-      let target = $(this.hash);
-      target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
-      if (target.length) {
-        $("html,body").animate(
-          {
-            scrollTop: target.offset().top
-          },
-          500
-        );
-        return false;
-      }
-    }
-  });
-
-  // Functions
-  function init() {
-    $('#fakeloader').fakeLoader({
-      timeToHide: 1200,
-      zIndex: '9999',
-      spinner: 'spinner1',
-      bgColor: '#192bc2'
-    });
-
-    $('#page').show();
-
-    new WOW().init();
-
-    $('#testimonial-slider').slick({
-      autoplay: true,
-      arrows: false,
-      dots: true,
-      speed: 1500
-    });
-
-    const emailBtn = document.getElementById('email-btn');
-    const emailBtnText = document.querySelector('#email-btn span');
-
-    emailBtn.addEventListener('click', function() {
-      navigator.clipboard.writeText('codeguydrew@gmail.com')
-          .then(() => {
-            emailBtnText.textContent = 'Copied!';
-            setTimeout(() => {
-              emailBtnText.textContent = 'Click to copy email';
-            }, 2000)
-          })
-    });
-  }
-
-  function openNav() {
-    $('#menu').css('height', '100%');
-  }
-
-  function closeNav() {
-    $('#menu').css('height', '0%');
-  }
-
-  $('.dtYear').each(function() {
-      $(this).text(new Date().getFullYear());
-  });
-
-});
+})();
