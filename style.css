@@ -262,7 +262,7 @@ img {
 }
 
 .blockquote-footer cite {
-  color: #53dd6c;
+  font-weight: bold;
 }
 
 .testimonial-container {
