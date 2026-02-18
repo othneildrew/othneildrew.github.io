@@ -76,12 +76,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- LET'S GET SOCIAL -->
 ## Let's Get Social
 
-* [Facebook](https://facebook.com/othneildrew)
-* [Dribble](https://dribbble.com/othneildrew)
+* [Dev Project Site] (https://othneil.dev)
 * [LinkedIn](https://linkedin.com/in/othneildrew)
 * [Github](https://github.com/othneildrew)
-* [Bitbucket](https://bitbucket.com/othneildrew)
-* [Instagram](http://instagram.com/pilotcroix)
 * [Codepen](http://codepen.io/othneildrew)
 * [freeCodeCamp](http://freeCodeCamp.com/othneildrew)
 
