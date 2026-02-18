@@ -76,11 +76,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- LET'S GET SOCIAL -->
 ## Let's Get Social
 
-* [Dev Project Site] (https://othneil.dev)
+* [Dev Project Site](https://othneil.dev)
 * [LinkedIn](https://linkedin.com/in/othneildrew)
 * [Github](https://github.com/othneildrew)
-* [Codepen](http://codepen.io/othneildrew)
-* [freeCodeCamp](http://freeCodeCamp.com/othneildrew)
 
 
 <!-- CONTACT -->
